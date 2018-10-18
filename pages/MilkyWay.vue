@@ -25,7 +25,7 @@
       More than half the stars found in the Milky Way are older than the 4.5-billion-year-old sun. Galaxies like ours typically undergo a stellar baby boom, churning out stars in enormous quantities roughly 10 billion years ago.
       The most common stars in the galaxy are red dwarfs, a cool star about a tenth the mass of the sun. Once thought unsuitable for potential life-bearing planets because such bodies would have to be too close to meet the criteria, red dwarfs are now considered potential suspects.<br>
       As late as the 1920s, astronomers thought all of the stars in the universe were contained inside of the Milky Way. It wasn't until Edwin Hubble discovered a special star known as a Cepheid variable, which allowed him to precisely measure distances, that astronomers realized that the fuzzy patches once classified as nebula were actually separate galaxies.<br>
-      
+
       </h5></section>
       <section id="images">
         <p class="highlight_text">The Arms of the Milky Way</p>
@@ -33,9 +33,9 @@
         <p class="highlight_text">Milky Way Spiral</p>
         <img src="../assets/img/milkyway/spiral.jpg" class="img-fluid"/>
         <p class="highlight_text">Milky Way pulsar</p>
-        <img src="../assets/img/milkyway/milkyway_pulsar.jpeg" class="img-fluid"></img>
+        <img src="../assets/img/milkyway/milkyway_pulsar.jpeg" class="img-fluid"/>
         <p class="highlight_text">Merging of Milky Way with Andromeda</p>
-        <img src="../assets/img/milkyway/merge.jpg" class="img-fluid"></img>
+        <img src="../assets/img/milkyway/merge.jpg" class="img-fluid"/>
 
 
       </section>
@@ -66,17 +66,17 @@
 }
 #title {
   font-size: 1.5rem;
-  margin-bottom:5px;
+  margin-bottom: 5px;
 }
 
 #subTitle {
   font-size: 1rem;
   font-style: italic;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
 #info {
-  margin-bottom:30px;
+  margin-bottom: 30px;
 }
 
 #info h5 {
@@ -85,14 +85,14 @@
 
 #images img {
   max-width: 100%;
-  margin-bottom:30px;
-  margin-top:-15px;
+  margin-bottom: 30px;
+  margin-top: -15px;
 }
 
 /* MEDIUM UP */
 @media screen and (min-width: 991px) {
   #title-section {
-    margin-bottom:40px;
+    margin-bottom: 40px;
   }
 
   #title {
@@ -111,17 +111,17 @@
 
   #images img {
     max-width: 500px;
-    margin-bottom:30px;
+    margin-bottom: 30px;
   }
 
   #info {
-    order:1;
-    margin-right:25px;
+    order: 1;
+    margin-right: 25px;
   }
 
   #images {
     align-self: flex-start;
-    justify-items:center;
+    justify-items: center;
   }
 }
 </style>

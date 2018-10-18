@@ -1,6 +1,6 @@
 <template>
   <div class="b-container fluid">
-    <h4 class="mb-3">Planets in our solar system</h4>
+    <h4 id="title">Planets in our solar system</h4>
     <div id="planets">
       <section>
         <ul id="planet_links">
@@ -50,7 +50,6 @@ h4 {
   align-items: center;
   justify-content: center;
   padding: 0;
-  
 }
 
 li {
@@ -58,6 +57,10 @@ li {
   font-size: 1.2rem;
   color: #c0c0c0;
   padding: 10px;
+}
+
+#title {
+  padding-left: 10px;
 }
 
 /*****MEDIUM UP VIEW*****/
@@ -82,52 +85,12 @@ li {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
+
+  #title {
+    font-size: 2.5rem;
+    padding-left: 30px;
+  }
 }
 </style>
 
 
-/*
-  #solar_system {
-
-    display: flex;
-    width: 100%;
-    margin-bottom: 40px;
-    justify-content: center;
-  }
-
-  #solar_system_img {
-    margin-right: 20px;
-    width: 45%;
-  }
-
-  #solar_system_text {
-    width: 45%;
-  }
-
-  #planet_section {
-    /* contains planet list, image and info */
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .planet {
-    display: flex;
-    margin-bottom: 40px;
-  }
-
-  .planet img {
-    flex: 1;
-    padding-right: 10px;
-    width: 500px;
-    max-height: 600px;
-  }
-
-  .planet_info {
-    flex-flow: column;
-    align-items: flex-start;
-    flex: 2;
-
-    margin-bottom: 10px;
-    max-height: 600px;
-    overflow-y: auto;
-  } */
