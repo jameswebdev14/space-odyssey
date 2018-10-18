@@ -9,7 +9,7 @@
         <b-nav-item href="#"><nuxt-link to="/solarsystem" class="link">Our Solar System</nuxt-link></b-nav-item>
         <b-nav-item href="#"><nuxt-link to="/sun" class="link">The Sun</nuxt-link></b-nav-item>
         <b-nav-item href="#"><nuxt-link to="/universe" class="link">Our Universe</nuxt-link></b-nav-item>
-        <b-nav-item href="#"><nuxt-link to="/other" class="link">other</nuxt-link></b-nav-item>
+        <b-nav-item href="#"><nuxt-link to="/misc" class="link">Misc</nuxt-link></b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>

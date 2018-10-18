@@ -4,9 +4,9 @@
     <div id="planets">
       <section>
         <ul id="planet_links">
-          <li><nuxt-link to="/planets/earth">EARTH</nuxt-link></li>
-          <li><nuxt-link to="/planets/jupiter">JUPITER</nuxt-link></li>
-          <li><nuxt-link to="/planets/mars">MARS</nuxt-link></li>
+          <li><nuxt-link to="earth">EARTH</nuxt-link></li>
+          <li><nuxt-link to="jupiter">JUPITER</nuxt-link></li>
+          <li><nuxt-link to="mars">MARS</nuxt-link></li>
           <li><nuxt-link to="mercury">MERCURY</nuxt-link></li>
           <li><nuxt-link to="neptune">NEPTUNE</nuxt-link></li>
           <li><nuxt-link to="pluto">PLUTO</nuxt-link></li>
@@ -87,7 +87,7 @@ li {
   }
 
   #title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     padding-left: 30px;
   }
 }
