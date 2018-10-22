@@ -1,5 +1,9 @@
 <template>
 <div id="universe">
+  <section id="title-section">
+      <h2 id="title">The Universe</h2>
+      <h4 id="subTitle"> - everything there is</h4>
+    </section>
   <section id="left_side_images">
     <div class="images">
       <p class="highlight_text image_label">Center of the Universe</p>
@@ -146,7 +150,8 @@
   #universe {
     margin: 0 30px;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 80px auto auto;
   }
 
   #universe_text {
@@ -164,11 +169,15 @@
   #left_side_images {
     grid-column: 1 / 2;
     order: 1;
+    justify-content:center;
+    margin: 0 auto;
   }
 
   #right_side_images {
     grid-column: 3 / 4;
     order: 1;
+    justify-content:center;
+    margin: 0 auto;
   }
 
   #universe_img {
@@ -197,5 +206,6 @@
     margin-top: 30px;
     margin-bottom: 0;
   }
+
 }
 </style>

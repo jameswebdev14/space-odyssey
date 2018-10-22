@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <section id="title-section">
-      <h1 id="title">The Sun</h1>
-      <h3 id="subTitle"> - Bringer of Light and Energy</h3>
+      <h2 id="title">The Sun</h2>
+      <h4 id="subTitle"> - Bringer of Light and Energy</h4>
     </section>
     <section id="content">
       <section id="info">
@@ -132,12 +132,7 @@ li {
   align-items: center;
 }
 
-#title-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: baseline;
-}
+
 #title {
   font-size: 1.5rem;
   margin-bottom: 5px;

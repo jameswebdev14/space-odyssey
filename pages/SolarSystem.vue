@@ -1,6 +1,10 @@
 <template>
   <div class="container">
     <section id="solar_system">
+    <section id="title-section">
+      <h2 id="title">The Solar System</h2>
+      <h4 id="subTitle"> - our home</h4>
+    </section>
       <section id="solar_system_text">
         <h5>The solar system is made up of the sun and everything that orbits around it, including planets, moons, asteroids,
         comets and meteoroids. It extends from the sun, called Sol by the ancient Romans, and goes past the four inner planets,
@@ -18,7 +22,7 @@
         and to make better predictions about solar activity and its effect on Earth.<br>
         The four inner four planets — Mercury, Venus, Earth and Mars — are made up mostly of iron and rock. They are known as terrestrial or earthlike planets because of their similar size and composition.
         Earth has one natural satellite — the moon — and Mars has two moons — Deimos and Phobos.
-        Between Mars and Jupiter lies the <nuxt-link to='../other/asteroid-belt'>Asteroid Belt</nuxt-link>. Asteroids are minor planets, and scientists estimate there are more than 750,000 of them with diameters larger than three-fifths of a mile (1 km) and millions of smaller asteroids. The dwarf planet Ceres, about 590 miles (950 km) in diameter, resides here. A number of asteroids have orbits that take them closer into the solar system that sometimes lead them to collide with Earth or the other inner planets.</h5>
+        Between Mars and Jupiter lies the Asteroid Belt. Asteroids are minor planets, and scientists estimate there are more than 750,000 of them with diameters larger than three-fifths of a mile (1 km) and millions of smaller asteroids. The dwarf planet Ceres, about 590 miles (950 km) in diameter, resides here. A number of asteroids have orbits that take them closer into the solar system that sometimes lead them to collide with Earth or the other inner planets.</h5>
       </section>
       <div  id="images">
         <img src="../assets/img/solar.jpg" alt="Solar System" class="img-fluid">
@@ -31,60 +35,66 @@
 <style scoped>
 /* DEFAULT MOBILE VIEW */
 #solar_system {
-  display:flex;
+  display: flex;
   flex-flow: column;
-  justify-content:center;
+  justify-content: center;
 }
 
 #solar_system_text {
-  padding:5px;
+  padding: 5px;
 }
 
 #solar_system_text h5 {
-  font-size:1rem;
+  font-size: 1rem;
 }
 
 #solar_system_img {
-  display:flex;
-  flex-wrap:wrap;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items:center;
-  margin-bottom:20px;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 img {
-  max-width:700px;
+  max-width: 700px;
 }
 
 /*  MEDIUM UP VIEW */
-@media screen and (min-width:991px) {
-#solar_system {
-  flex-flow: row;
-  justify-content:center;
-  align-items: center;
-}
+@media screen and (min-width: 991px) {
+  #solar_system {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px auto;
+    justify-content: center;
+    align-items: center;
+  }
 
-#solar_system_text {
-  margin: auto;
-  padding:30px;
-  font-size: 2rem;
-}
+  #solar_system_text {
+    margin: auto;
+    padding: 30px;
+    font-size: 2rem;
+  }
 
-#solar_system_img {
-  display:flex;
-  justify-content: space-evenly;
-  margin-bottom:40px;
-}
+  #solar_system_img {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+  }
 
-#solar_system_text h4 {
-  font-size: 1.5rem;
-  margin-bottom:20px;
-}
+  #solar_system_text h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
 
-#images img {
+  #images img {
     max-width: 500px;
-    margin-bottom:30px;
+    margin-bottom: 30px;
+  }
+
+  #title-section {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
   }
 }
-
 </style>

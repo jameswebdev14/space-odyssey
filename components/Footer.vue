@@ -1,23 +1,19 @@
 <template>
   <div id="footer">
-    <h6>&copy Nigel James Wheeldon 2017</h6>
+    <h6>&copy Nigel Wheeldon 2017</h6>
   </div>
 </template>
-
-<script>
-export default {};
-</script>
 
 <style>
 #footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  background-color: transparent;
   color: #c0c0c0;
-  height: 20x;
+  height: 25px;
+  margin-top:20px;
   position: relative;
-  top: 100%;
-  left: 0;
+  
 }
 </style>

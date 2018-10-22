@@ -17,7 +17,7 @@
       <h4>Welcome to your gateway into the mysterious and exciting world of outer space</h4>
     </section>
     <section id="content">
-      <iframe width="760" height="415" src="https://www.youtube.com/embed/m1EBHOmXSqA?rel=0&amp;controls=0&amp;showinfo=0&amp;start=32" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+      <iframe src="https://www.youtube.com/embed/m1EBHOmXSqA?rel=0&amp;controls=0&amp;showinfo=0&amp;start=32" frameborder="0" controls allow="autoplay; encrypted-media" class="embed-responsive"></iframe>
     </section>
     <section id="links"></section>
   </div>
@@ -32,17 +32,23 @@ export default {
 
 <style>
 /*****DEFAULT MOBILE*****/
+#main_section {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
 .fluid {
   min-height: 100vh;
   display: flex;
   justify-content: center;
 }
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+  font-family: 'montserrat', "Source Sans Pro", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 1rem;
   color: #35495e;
   letter-spacing: 1px;
 }
@@ -57,6 +63,8 @@ export default {
 
 #intro h4 {
   text-align: center;
+  font-weight: bold;
+
 }
 
 .subtitle {
@@ -74,6 +82,12 @@ export default {
   display: none;
 }
 
+iframe {
+  width: 100%;
+  height: 400px;
+  border: 2px ridge #526488;
+}
+
 /*****MEDIUM UP********/
 @media screen and (min-width: 768px) {
   .fluid {
@@ -86,7 +100,8 @@ export default {
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px auto;
-    border: 2px dotted red;
+    justify-content: start;
+    align-content:start;
   }
 
   .top_image_bar {
@@ -123,12 +138,17 @@ export default {
   #content {
     display: grid;
     grid-row: 2 / 3;
-    grid-column: 1 / 2;
+    grid-column: 1 / -1;
   }
 
   #links {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+  }
+
+  iframe {
+    width: 760px;
+    height: 550px;
   }
 }
 </style>

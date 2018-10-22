@@ -16,7 +16,7 @@
         </ul>
       </section>
       <section id="planet_section">
-        <nuxt-child to="earth"></nuxt-child>
+        <nuxt-child to="earth"/>
       </section>
     </div>
   </div>
