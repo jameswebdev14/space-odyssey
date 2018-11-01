@@ -1,18 +1,19 @@
 <template>
   <div>
-    <div id="" class="planet">
-      <div id="images">
+    <div class="planet">
+      <div class="images">
         <img class="planet_images img-fluid" src="../../assets/img/planets/earth.jpg" alt="Earth" style="float:left;">
         <img class="planet_images img-fluid"  src="../../assets/img/mantel.jpg" alt="Earth" style="float:left;">
         <img class="planet_images img-fluid"  src="../../assets/img/planets/earth2.jpg" alt="Earth" style="float:left;">
       </div>
       <div class="planet_info">
         <h5 class="planet_name">EARTH</h5>
-        <h6 class="planet_info"> Earth, our home, is the third planet from the sun. It's the only planet known to have an atmosphere containing free oxygen, oceans of water on its surface and, of course, life.
+        <h6 class="planet_info"> Earth, our home, is the third planet from the sun.<br>
+          It's the only planet known to have an atmosphere containing free oxygen, oceans of water on its surface and, of course, life.<br>
           Earth is the fifth largest of the planets in the solar system. It's smaller than the four gas giants —Jupiter, Saturn, Uranus and Neptune — but larger than the three other rocky planets, Mercury, Mars and Venus.
           Earth has a diameter of roughly 8,000 miles (13,000 kilometers) and is round because gravity pulls matter into a ball. But, it's not perfectly round. Earth is really an "oblate spheroid," because its spin causes it to be squashed at its poles and swollen at the equator.
-          Water covers roughly 71 percent of Earth's surface, and most of that is in the oceans. About a fifth of Earth's atmosphere consists of oxygen, produced by plants. While scientists have been studying our planet for centuries, much has been learned in recent decades by studying pictures of Earth from space.
-          Earth's orbit
+          Water covers roughly 71 percent of Earth's surface, and most of that is in the oceans. About a fifth of Earth's atmosphere consists of oxygen, produced by plants. While scientists have been studying our planet for centuries, much has been learned in recent decades by studying pictures of Earth from space.<br><br>
+          <span class="highlight_text">Earth's orbit</span><br>
           While Earth orbits the sun, the planet is simultaneously spinning on an imaginary line called an axis that runs from the North Pole to the South Pole. It takes Earth 23.934 hours to complete a rotation on its axis and 365.26 days to complete an orbit around the sun.
           Earth's axis of rotation is tilted in relation to the ecliptic plane, an imaginary surface through the planet's orbit around the sun. This means the Northern and Southern hemispheres will sometimes point toward or away from the sun depending on the time of year, and this changes the amount of light the hemispheres receive, resulting in the seasons.
           Earth's orbit is not a perfect circle, but rather an oval-shaped ellipse, similar to the orbits of all the other planets. Our planet is a bit closer to the sun in early January and farther away in July, although this variation has a much smaller effect than the heating and cooling caused by the tilt of Earth's axis. Earth happens to lie within the so-called "Goldilocks zone" around the sun, where temperatures are just right to maintain liquid water on our planet's surface
@@ -41,7 +42,7 @@
           Earth-orbiting satellites have shown that the upper atmosphere actually expands during the day and contracts at night due to heating and cooling
           </h6>
           <ul class="planet_facts highlight_text">
-            <h4>Key Facts:</h4>
+            <h4 id="fact-heading">Key Facts:</h4>
             <li>Average distance from the sun: 92,956,050 miles (149,598,262 km)</li>
             <li>Perihelion (closest approach to the sun): 91,402,640 miles (147,098,291 km)</li>
             <li>Aphelion (farthest distance from the sun): 94,509,460 miles (152,098,233 km)</li>
@@ -58,9 +59,9 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 /*  DEFAULT MOBILE VEW */
-#images {
+.images {
   display: flex;
   flex-flow: column;
   order: 2;
@@ -71,7 +72,31 @@ export default {};
 }
 
 .planet_facts {
-  margin:20px 0;
-  padding-left:0;
+  margin: 20px 0;
+  padding-left: 0;
+  font-size: 0.9rem;
+}
+
+#fact-heading {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 991px) {
+  .planet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #fact-heading {
+    font-size: 1.4rem;
+    letter-spacing: 5px;
+  }
+
+  .planet_facts {
+    margin: 20px 0;
+    padding-left: 0;
+    font-size: 1.2rem;
+  }
 }
 </style>

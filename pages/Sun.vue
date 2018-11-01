@@ -1,10 +1,11 @@
 <template>
   <div class="container">
-    <section id="title-section">
-      <h2 id="title">The Sun</h2>
-      <h4 id="subTitle"> - Bringer of Light and Energy</h4>
-    </section>
-    <section id="content">
+    <section id="sun">
+      <section id="title-section">
+        <h2 class="page-title">The Sun</h2>
+        <h4 class="page-subtitle"> - Bringer of Light and Energy</h4>
+      </section>
+
       <section id="info">
         <h5>
           The Sun is by far the largest object in the solar system. It contains more than 99.8% of the total mass of the Solar System, <nuxt-link to="planets/jupiter">Jupiter</nuxt-link>
@@ -39,74 +40,76 @@
           The Sun is about 4.5 billion years old. Since its birth it has used up about half of the hydrogen in its core. It will continue to radiate "peacefully" for another 5 billion years or so (although its luminosity will approximately double in that time). But eventually it will run out of hydrogen fuel. It will then be forced into radical changes which, though commonplace by stellar standards, will result in the total destruction of the Earth (and probably the creation of a planetary nebula).<br><br>
           <span>The Sun's satellites</span><br>
           There are eight planets and a large number of smaller objects orbiting the Sun. (Exactly which bodies should be classified as planets and which as "smaller objects" has been the source of some controversy, but in the end it is really only a matter of definition.)<br><br>
-          <table class="table">
-            <tr>
-              <th>Planet</th>
-              <th>Distance(000 km)</th>
-              <th>Radius(km)</th>
-              <th>Mass(kg)</th>
-            </tr>
-            <tr>
-              <td>Earth</td>
-              <td>149,600</td>
-              <td>6378</td>
-              <td>5.98e24</td>
-            </tr>
-            <tr>
-              <td>Jupiter</td>
-              <td>778,330</td>
-              <td>71492</td>
-              <td>1.90e27</td>
-            </tr>
-            <tr>
-              <td>Mars</td>
-              <td>227,940</td>
-              <td>3397</td>
-              <td>6.42e23</td>
-            </tr>
-            <tr>
-              <td>Mercury</td>
-              <td>57,910</td>
-              <td>2439</td>
-              <td>3.30e23</td>
-            </tr>
-              <td>Neptune</td>
-              <td>4,497,070</td>
-              <td>24764</td>
-              <td>1.02e26</td>
-              
-            </tr>
-            <tr>
-              <td>Pluto</td>
-              <td>5,913,520</td>
-              <td>1160</td>
-              <td>1.31e22</td>
-            </tr>
-            <tr>
-              <td>Saturn</td>
-              <td>1,426,940</td>
-              <td>60268</td>
-              <td>5.69e26</td>
-            </tr>
-            <tr>
-              <td>Uranus</td>
-              <td>2,870,990</td>
-              <td>25559</td>
-              <td>8.69e25</td>
-            </tr>
-            <tr>
-              <td>Venus</td>
-              <td>108,200</td>
-              <td>6052</td>
-              <td>4.87e24</td>
-            </tr>
-          </table><br><br>
         </h5>
       </section>
       <section id="images">
           <img src="../assets/img/sun/sun_surface.jpg" class="img-fluid"/>
           <img src="../assets/img/sun/sun_explosion.jpg" class="img-fluid"/>
-          <img src="../assets/img/sun/sun_inside.jpg" class="img-fluid"></img>
+          <img src="../assets/img/sun/sun_inside.jpg" class="img-fluid"/>>
+
+      <table class="table table-bordered">
+        <tr>
+          <th>Planet</th>
+          <th>Distance(000 km)</th>
+          <th>Radius(km)</th>
+          <th>Mass(kg)</th>
+        </tr>
+        <tr>
+          <td>Earth</td>
+          <td>149,600</td>
+          <td>6378</td>
+          <td>5.98e24</td>
+        </tr>
+        <tr>
+          <td>Jupiter</td>
+          <td>778,330</td>
+          <td>71492</td>
+          <td>1.90e27</td>
+        </tr>
+        <tr>
+          <td>Mars</td>
+          <td>227,940</td>
+          <td>3397</td>
+          <td>6.42e23</td>
+        </tr>
+        <tr>
+          <td>Mercury</td>
+          <td>57,910</td>
+          <td>2439</td>
+          <td>3.30e23</td>
+        </tr>
+        <tr>
+          <td>Neptune</td>
+          <td>4,497,070</td>
+          <td>24764</td>
+          <td>1.02e26</td>
+
+        </tr>
+        <tr>
+          <td>Pluto</td>
+          <td>5,913,520</td>
+          <td>1160</td>
+          <td>1.31e22</td>
+        </tr>
+        <tr>
+          <td>Saturn</td>
+          <td>1,426,940</td>
+          <td>60268</td>
+          <td>5.69e26</td>
+        </tr>
+        <tr>
+          <td>Uranus</td>
+          <td>2,870,990</td>
+          <td>25559</td>
+          <td>8.69e25</td>
+        </tr>
+        <tr>
+          <td>Venus</td>
+          <td>108,200</td>
+          <td>6052</td>
+          <td>4.87e24</td>
+        </tr>
+      </table>
       </section>
     </section>
   </div>
@@ -119,37 +122,43 @@
 }
 
 ul {
-  padding:0;
+  padding: 0;
 }
 
 li {
   list-style: none;
 }
 
-#content {
+#sun {
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: center;
 }
-
 
 #title {
   font-size: 1.5rem;
   margin-bottom: 5px;
 }
 
-#subTitle {
-  font-size: 1rem;
-  font-style: italic;
-  margin-bottom: 20px;
-}
-
 #info {
   margin-bottom: 30px;
+  grid-column: 1 / 2;
+  grid-row: 2 /3;
 }
 
 #info h5 {
   font-size: 1rem;
+}
+
+.table {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+  font-size: 0.7rem;
 }
 
 #images img {
@@ -160,22 +169,18 @@ li {
 
 /* MEDIUM UP */
 @media screen and (min-width: 991px) {
+  #sun {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 1fr;
+    margin-top: 20px;
+  }
+
   #title-section {
     margin-bottom: 40px;
-  }
-
-  #title {
-    font-size: 2.5rem;
-  }
-
-  #subTitle {
-    font-size: 1.3rem;
-  }
-
-  #content {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    align-items: baseline;
   }
 
   #images img {
@@ -184,13 +189,30 @@ li {
   }
 
   #info {
-    order: 1;
-    margin-right: 25px;
+    grid-column: 1 / 2;
+    grid-row: 2 / -1;
   }
 
   #images {
-    align-self: flex-start;
-    justify-items: center;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-content: start;
+    align-self: start;
+    margin-top: 20px;
+    align-self: start;
+    order: 1;
+  }
+
+  .table {
+    grid-column: 2 / 3;
+    grid-row: 2 / -1;
+    overflow-x: auto;
+    margin-bottom: 30px;
+  }
+
+  .table th,
+  .table td {
+    font-size: 1rem;
   }
 }
 </style>

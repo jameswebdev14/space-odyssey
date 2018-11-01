@@ -2,15 +2,17 @@
   <b-navbar toggleable="lg" type="dark" variant="faded" ml-auto>
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
     <b-collapse is-nav id="nav_collapse">
-      <b-navbar-nav ml-auto>
-        <b-nav-item href="#"><nuxt-link to="/" class="link">Home</nuxt-link></b-nav-item>
-        <b-nav-item href="#"><nuxt-link to="/milkyway" class="link">The Milky Way</nuxt-link></b-nav-item>
-        <b-nav-item href="#"><nuxt-link to="/planets/earth" class="link">The Planets</nuxt-link></b-nav-item>
-        <b-nav-item href="#"><nuxt-link to="/solarsystem" class="link">Our Solar System</nuxt-link></b-nav-item>
-        <b-nav-item href="#"><nuxt-link to="/sun" class="link">The Sun</nuxt-link></b-nav-item>
-        <b-nav-item href="#"><nuxt-link to="/universe" class="link">Our Universe</nuxt-link></b-nav-item>
-        <b-nav-item href="#"><nuxt-link to="/misc/asteroids" class="link">Misc</nuxt-link></b-nav-item>
-      </b-navbar-nav>
+      <no-ssr>
+        <b-navbar-nav>
+          <b-nav-item href="#"><nuxt-link to="/" class="link">Home</nuxt-link></b-nav-item>
+          <b-nav-item href="#"><nuxt-link to="/planets/earth" class="link">The Planets</nuxt-link></b-nav-item>
+          <b-nav-item href="#"><nuxt-link to="/solarsystem" class="link">Our Solar System</nuxt-link></b-nav-item>
+          <b-nav-item href="#"><nuxt-link to="/sun" class="link">The Sun</nuxt-link></b-nav-item>
+          <b-nav-item href="#"><nuxt-link to="/moons" class="link">Moons</nuxt-link></b-nav-item>
+          <b-nav-item href="#"><nuxt-link to="/universe" class="link">Our Universe</nuxt-link></b-nav-item>
+          <b-nav-item href="#"><nuxt-link to="/misc/asteroids" class="link">Misc</nuxt-link></b-nav-item>
+        </b-navbar-nav>
+      </no-ssr>
     </b-collapse>
   </b-navbar>
 </template>
@@ -40,16 +42,20 @@ export default {};
   color: red;
 }
 
+.navbar {
+  margin-bottom: 25px;
+}
+
 /*****MEDIUM - LARGE VIEW*****/
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   .link {
     color: #c0c0c0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     margin: auto;
+    margin-bottom: 40px;
     padding: 20px;
-    height: 40px;
-    width: 100px;
+    height: 30px;
     text-align: center;
     box-sizing: border-box;
   }

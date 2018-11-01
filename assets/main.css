@@ -1,6 +1,104 @@
+html {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    background: rgba(0, 0, 25, 0.8);
+    /*background: url('../assets/img/background_main.jpg');
+    background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;*/
+    color: #c0c0c0;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+#main-title {
+    font-size: 2rem;
+    color: #c0c0c0;
+    text-shadow: 0 2px red;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#main-subTitle {
+    display: inline-block;
+    font-size: 1.3rem;
+    color: #c0c0c0;
+    margin-top: 10px;
+    align-items: flex-end;
+}
+
+#title-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    align-items: center;
+    padding: 0;
+}
+
+.highlight_text {
+    color: red;
+    text-transform: capitalize;
+    font-style: italic;
+}
+
+.planet {
+    display: flex;
+    flex-flow: column;
+}
+
+.page-title {
+    font-size: 1.4rem;
+    text-shadow: 0 2px red;
+}
+
+.planet_name {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-shadow: 0 2px red;
+    text-align: left;
+}
+
+.planet_info {
+    text-align: left;
+    font-size: 0.9rem;
+    order: 1;
+}
+
+.planet_images {
+    width: 95%;
+    margin: auto;
+    max-width: 620px;
+    margin-top: 15px;
+}
+
+#images {
+    display: flex;
+    flex-flow: column;
+    order: 2;
+}
+
 .page-enter-active,
 .page-leave-active {
-    transition: opacity .5s;
+    transition: opacity 0.5s;
 }
 
 .page-enter,
@@ -22,48 +120,102 @@
     margin-bottom: 15px;
 }
 
-html {
-    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 16px;
-    word-spacing: 1px;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
+.image {
+    transition: transform 1s ease 0.2s;
+    -webkit-transition: transform 1s ease 0.2s;
+    -moz-transition: transform 1s ease 0.2s;
+    -ms-transition: transform 1s ease 0.2s;
+    -o-transition: transform 1s ease 0.2s;
 }
 
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-    margin: 0;
+li {
+    list-style: none;
 }
 
-body {
-    background-color: black;
-    background: url('../assets/img/background_main.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #c0c0c0;
-    text-align: center;
-    font-family: 'montserrat', sans-serif;
+
+/* MEDIUM VIEW */
+
+@media screen and (min-width: 991px) and (max-width: 1199px) {
+    #main-title {
+        font-size: 3rem;
+        margin-bottom: 5px;
+    }
+    #main-subTitle {
+        display: inline-block;
+        font-size: 1.6rem;
+        align-items: baseline;
+    }
+    .image:hover {
+        cursor: pointer;
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+    }
+    .planet_name {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .planet_info {
+        text-align: left;
+        font-size: 1.2rem;
+        grid-column: 1 / 2;
+    }
+    .page-title {
+        font-size: 1.6rem;
+        text-shadow: 0 2px red;
+    }
+    .page-subtitle {
+        font-size: 1rem;
+        color: #c0c0c0;
+        font-style: italic;
+    }
 }
 
-.silver_text {
-    background-color: transparent;
-    border: 2px solid #c0c0c0;
-}
 
-#title-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: baseline;
-}
+/* LARGE VIEW */
 
-#title-section #title {
-    text-align:left;
-    font-size: 2rem;
+@media screen and (min-width: 1200px) {
+    #main-title {
+        font-size: 4rem;
+        margin: 20px 20px 30px 0;
+        text-shadow: 0 4px red;
+    }
+    #main-subTitle {
+        display: inline-block;
+        font-size: 2rem;
+        color: #c0c0c0;
+        margin-top: 0;
+        align-items: baseline;
+    }
+    .image:hover {
+        cursor: pointer;
+        transform: scale(2);
+        -webkit-transform: scale(2);
+        -moz-transform: scale(2);
+        -ms-transform: scale(2);
+        -o-transform: scale(2);
+    }
+    .planet_name {
+        font-size: 1.5rem;
+    }
+    .planet_info {
+        font-size: 1.2rem;
+        grid-column: 1 / 2;
+        grid-row: 1 / -1;
+    }
+    #images {
+        grid-column: 2 / 3;
+        grid-row: 1 / -1;
+    }
+    .page-title {
+        font-size: 2rem;
+        text-shadow: 0 2px red;
+        text-transform: uppercase;
+        margin-right: 20px;
+    }
+    .page-subtitle {
+        font-size: 1.5rem;
+    }
 }

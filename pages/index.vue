@@ -1,5 +1,5 @@
 <template>
-<div class="b.container fluid">
+<div class="container-fluid">
   <section class="top_image_bar">
     <div id="image_row">
       <img src="/img/oursolarsystem.jpg" alt="Solar System" class="img-fluid">
@@ -9,43 +9,68 @@
       <img src="/img/solarsun.jpg" alt="Our Sun & Solar System" class="img-fluid">
       <img src="/img/spacerings.jpg" alt="Space Rings" class="img-fluid">
       <img src="/img/spiral.jpg" alt="Spiral" class="img-fluid">
-      <img src="/img/space.jpg" alt="" class="img-fluid">
+      <img src="/img/space.jpg" alt="Space" class="img-fluid">
     </div>
   </section>
+
+  <section id="intro">
+      <h3>Welcome to your gateway into the mysterious and exciting world of outer space</h3>
+  </section>
   <div id="main_section">
-    <section id="intro">
-      <h4>Welcome to your gateway into the mysterious and exciting world of outer space</h4>
+    <section id="news">
+      <news v-bind:nasa_data=nasa_data></news>
     </section>
     <section id="content">
-      <iframe src="https://www.youtube.com/embed/m1EBHOmXSqA?rel=0&amp;controls=0&amp;showinfo=0&amp;start=32" frameborder="0" controls allow="autoplay; encrypted-media" class="embed-responsive"></iframe>
+      <h5>Space trip through our solar system</h5>
+      <div class="embed-responsive embed-responsive-16by9 m-auto">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/m1EBHOmXSqA?rel=0&amp;controls=0&amp;showinfo=0&amp;start=32" allowfullscreen></iframe>
+      </div>
     </section>
-    <section id="links"></section>
+    <section id="quiz">
+      <quiz></quiz>
+    </section>
   </div>
 </div>
 </template>
 
 <script>
+import quiz from "@/components/Quiz";
+import news from "@/components/News";
+
 export default {
-  components: {}
+  name: "index",
+  async asyncData({ app }) {
+    const NASA_API = "moCBUS48Zn51fBuHIOMX3WlM9rUrcBDUJuz3MjN8";
+    const nasa_data = await app.$axios.$get(
+      `https://api.nasa.gov/planetary/apod?api_key=${NASA_API}`
+    );
+    console.log("nasa_data: ", nasa_data);
+    return { nasa_data };
+  },
+  components: { quiz, news }
 };
 </script>
 
 <style>
 /*****DEFAULT MOBILE*****/
-#main_section {
+.container-fluid {
+  min-height: 100vh;
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: center;
 }
-.fluid {
-  min-height: 100vh;
+
+#main_section {
   display: flex;
-  justify-content: center;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
 }
+
 .title {
-  font-family: 'montserrat', "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+  font-family: "montserrat", "Source Sans Pro", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 1rem;
@@ -57,98 +82,206 @@ export default {
   color: #c0c0c0;
   justify-content: center;
   align-content: center;
-  margin-top: 40px;
+  margin-top: 0;
   padding: 0 10px;
+  margin-bottom: 30px;
 }
 
 #intro h4 {
   text-align: center;
   font-weight: bold;
-
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-.links {
-  padding-top: 15px;
-}
-
-#image_row {
-  display: none;
+  font-size: 1.2rem;
 }
 
 iframe {
   width: 100%;
-  height: 400px;
+  height: auto;
   border: 2px ridge #526488;
+  margin: auto;
+  width: 650px;
+}
+
+#content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+
+#content h5 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #c0c0c0;
+  text-shadow: 2px 0 red;
+  letter-spacing: 2px;
+}
+
+#content div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.top_image_bar {
+  display: none;
+}
+
+#news {
+  order: 2;
+  margin-top: 40px;
+}
+
+#quiz {
+  margin: auto;
+  margin-top: 30px;
+  order: 3;
 }
 
 /*****MEDIUM UP********/
-@media screen and (min-width: 768px) {
-  .fluid {
-    padding: 0 40px;
-  }
-
-  #main_section {
-    margin-top: 170px;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px auto;
-    justify-content: start;
-    align-content:start;
+@media screen and (min-width: 991px) and (max-width: 1450px) {
+  .container-fluid {
+    padding: 0 30px;
   }
 
   .top_image_bar {
-    height: 180px;
+    display: block;
+    max-width: 100vw;
+    overflow: hidden;
+    z-index: 40;
   }
 
   #image_row {
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 260px;
+    top: 250px;
     left: 0;
     height: 160px;
-    width: 100%;
+    width: 100vw;
     border-top: 5px ridge grey;
     border-bottom: 5px ridge grey;
   }
 
   #image_row img {
     height: 150px;
-    max-width: 12%;
-    min-width: 13%;
+    max-width: 12.5%;
+    width: 12.5%;
+    overflow: hidden;
   }
 
   #intro {
     color: #c0c0c0;
     text-align: center;
-    margin-top: 20px;
-    padding: 0 40px;
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
+    width: 100%;
+    margin-top: 200px;
+    height: 80px;
+  }
+
+  #main_section {
+    margin-top: 0;
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-items: start;
+  }
+
+  #intro h4 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.6rem;
   }
 
   #content {
-    display: grid;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 80%;
+    margin: 40px auto;
+  }
+
+  #content h5 {
+    font-size: 1.7rem;
+    margin-bottom: 0;
+    letter-spacing: 2px;
+  }
+
+  #quiz {
     grid-row: 2 / 3;
     grid-column: 1 / -1;
   }
 
-  #links {
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
+  #news {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
   }
 
   iframe {
-    width: 760px;
-    height: 550px;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+
+/*  LARGE SCREENS  */
+@media screen and (min-width: 1451px) {
+  #main_section {
+    margin-top: 0;
+    padding-top: 0;
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .top_image_bar {
+    display: block;
+    margin-bottom: 150px;
+  }
+
+  #image_row {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    height: 160px;
+    width: 100vw;
+    border-top: 5px ridge grey;
+    border-bottom: 5px ridge grey;
+  }
+
+  #image_row img {
+    height: 150px;
+    max-width: 12.5%;
+    width: 12.5%;
+    overflow: hidden;
+  }
+
+  #content {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding-top: 40px;
+  }
+
+  #content h5 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+
+  #content div {
+    margin-top: 0;
   }
 }
 </style>

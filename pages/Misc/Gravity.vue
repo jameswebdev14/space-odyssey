@@ -18,7 +18,7 @@
       <div class="info">
         <h6 class="info">
         Gravity: we barely ever think about it, at least until we slip on ice or stumble on the stairs. To many ancient thinkers, gravity wasn’t even a force—it was just the natural tendency of objects to sink toward the center of Earth, while planets were subject to other, unrelated laws.<br>
-        Of course, we now know that gravity does far more than make things fall down. It governs the motion of planets around the Sun, holds galaxies together and determines the structure of the universe itself. We also recognize that gravity is one of the four fundamental forces of nature, along with electromagnetism, the weak force and the strong force. 
+        Of course, we now know that gravity does far more than make things fall down. It governs the motion of planets around the Sun, holds galaxies together and determines the structure of the universe itself. We also recognize that gravity is one of the four fundamental forces of nature, along with electromagnetism, the weak force and the strong force.
         The modern theory of gravity—Einstein’s general theory of relativity—is one of the most successful theories we have. At the same time, we still don’t know everything about gravity, including the exact way it fits in with the other fundamental forces.<br><br>
         <span class="highlight_text">Gravity in our universe</span><br>
         Gravity is what holds the planets in orbit around the sun and what keeps the moon in orbit around Earth. The gravitational pull of the moon pulls the seas towards it, causing the ocean tides. Gravity creates stars and planets by pulling together the material from which they are made.
@@ -61,22 +61,21 @@ li {
 }
 
 ul {
-  padding:5px;
+  padding: 5px;
 }
 
 #info {
-    font-size: 1rem;
-    padding: 5px;
-    grid-column: 1 / 5;
-    grid-row: 3 / 4;
-  }
-
+  font-size: 1rem;
+  padding: 5px;
+  grid-column: 1 / 5;
+  grid-row: 3 / 4;
+}
 
 /* MEDIUM UP VIEW */
-@media screen and (min-width:991px) {
+@media screen and (min-width: 991px) {
   .image {
-    max-width:400px;
-    height:350px;
+    max-width: 400px;
+    height: 350px;
   }
 
   #gravity {
@@ -91,7 +90,7 @@ ul {
     grid-row: 1 / 2;
     font-size: 1.5rem;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: center;
   }
 
   #info {
@@ -104,19 +103,19 @@ ul {
   .images-top {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
-    display:flex;
+    display: flex;
     justify-content: space-between;
-    max-height:100%;
+    max-height: 100%;
   }
 
   .image {
-    max-width:450px;
+    max-width: 450px;
     height: 350px;
-    margin-bottom:5px;
+    margin-bottom: 5px;
   }
 
   p {
-    font-size:1.2rem;
+    font-size: 1.2rem;
   }
 }
 </style>

@@ -6,10 +6,8 @@
       <li><nuxt-link to="blackholes">BLACK HOLES</nuxt-link></li>
       <li><nuxt-link to="galaxies">GALAXIES</nuxt-link></li>
       <li><nuxt-link to="gravity">GRAVITY</nuxt-link></li>
-
       <li><nuxt-link to="nebulas">NEBULA</nuxt-link></li>
-      <li><nuxt-link to="solarflares">SOLAR FLARES</nuxt-link></li>
-      <li><nuxt-link to="radiation">SOLAR RADIATION</nuxt-link></li>
+      <li><nuxt-link to="solarflares">SOLAR FLARES & RADIATION</nuxt-link></li>
     </ul>
   </section>
   <div class="content">
@@ -50,6 +48,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 5px;
+  font-size: 0.8rem;
   align-items: center;
   justify-content: center;
 }
@@ -68,7 +67,7 @@ span {
 @media screen and (min-width: 991px) {
   #misc {
     display: grid;
-    grid-template-columns: 260px auto;
+    grid-template-columns: 300px auto;
     grid-template-rows: auto;
     padding: 0 30px;
     margin-right: 20px;
@@ -78,7 +77,7 @@ span {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
     padding-top: 60px;
-    padding-left: 40px;
+    padding-left: 30px;
     justify-items: start;
     align-items: start;
     justify-content: flex-start;
@@ -99,6 +98,7 @@ span {
   #links ul li {
     list-style: none;
     padding: 10px;
+    font-size: 1rem;
   }
 
   #intro {

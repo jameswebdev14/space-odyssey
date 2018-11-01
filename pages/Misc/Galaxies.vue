@@ -77,7 +77,7 @@ li {
     grid-row: 1 / 2;
     font-size: 1.5rem;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: center;
   }
 
   #info {
@@ -88,7 +88,7 @@ li {
   }
 
   #info h6 {
-    text-align:left;
+    text-align: left;
   }
 
   .images-top {

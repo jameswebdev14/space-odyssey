@@ -1,6 +1,6 @@
 <template>
   <div class="b-container fluid">
-    <h4 id="title">Planets in our solar system</h4>
+    <h4 class="page-title">Planets in our solar system</h4>
     <div id="planets">
       <section>
         <ul id="planet_links">
@@ -36,8 +36,13 @@ export default {};
 }
 
 h4 {
-  font-size: 1.2em;
+  font-size: 1.4em;
   padding-left: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 0 2px red;
+  padding: 0;
+  margin-bottom: 15px;
 }
 
 #planets {
@@ -80,15 +85,9 @@ li {
     margin: 0 40px 0 30px;
   }
 
-  #planet_section {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-
-  #title {
+  h4 {
     font-size: 2.2rem;
-    padding-left: 30px;
+    margin-bottom: 35px;
   }
 }
 </style>

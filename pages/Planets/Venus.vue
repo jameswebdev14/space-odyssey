@@ -42,4 +42,4 @@
 </template>
 
 <script>
-<style />;
+<style />

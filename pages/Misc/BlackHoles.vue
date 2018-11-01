@@ -77,6 +77,7 @@ li {
   text-shadow: 0 2px red;
   padding: 0;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .image {
@@ -100,7 +101,6 @@ li {
     grid-column: 1 / -1;
     font-size: 1.5rem;
     margin-bottom: 15px;
-    text-align: left;
   }
 
   #info {

@@ -1,9 +1,9 @@
 <template>
 <div id="universe">
   <section id="title-section">
-      <h2 id="title">The Universe</h2>
-      <h4 id="subTitle"> - everything there is</h4>
-    </section>
+    <h2 class="page-title">The Universe</h2>
+    <h4 class="page-subtitle">- everything there is</h4>
+  </section>
   <section id="left_side_images">
     <div class="images">
       <p class="highlight_text image_label">Center of the Universe</p>
@@ -145,8 +145,17 @@
   width: 100%;
   margin-bottom: 13px;
 }
+
+#title {
+  text-align: center;
+}
+
 /*  MEDIUM UP VIEW */
 @media screen and (min-width: 991px) {
+  #title {
+    text-align: center;
+  }
+
   #universe {
     margin: 0 30px;
     display: grid;
@@ -169,14 +178,14 @@
   #left_side_images {
     grid-column: 1 / 2;
     order: 1;
-    justify-content:center;
+    justify-content: center;
     margin: 0 auto;
   }
 
   #right_side_images {
     grid-column: 3 / 4;
     order: 1;
-    justify-content:center;
+    justify-content: center;
     margin: 0 auto;
   }
 
@@ -207,5 +216,8 @@
     margin-bottom: 0;
   }
 
+  #title-section {
+    grid-column: 1 / -1;
+  }
 }
 </style>
