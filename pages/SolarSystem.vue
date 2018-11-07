@@ -2,8 +2,8 @@
 <template>
 <div>
   <div id="solar">
-    <section id="title-section">
-      <h1 class="page-title">SOLAR SYSTEM</h1>
+    <section class="title-section">
+      <h1 class="page-title">SOLAR SYSTEM </h1>
       <h3 class="page-subtitle">- our neighbourhood </h3>
     </section>
 
@@ -145,11 +145,12 @@ iframe {
     margin: 0 40px;
   }
 
-  #title-section {
+  .title-section {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     margin-bottom: 15px;
     display: flex;
+    align-items:baseline;
   }
 
   .images {

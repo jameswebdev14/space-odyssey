@@ -2,7 +2,7 @@
   <div>
     <div id="black-holes" class="misc">
       <div id="title">BLACK HOLES</div>
-      <div class="images">
+      <div class="images top-images">
         <img class="image img-fluid" src="../../assets/img/blackhole/heart-of-milky-way.jpg" alt="Earth">
         <img class="image img-fluid" src="../../assets/img/blackhole/star_black_hole.jpg" alt="Earth">
         <img class="image img-fluid" src="../../assets/img/blackhole/black-hole-event-horizon.jpg" alt="Earth">
@@ -34,14 +34,13 @@
           The sun will never turn into a black hole. The sun is not a big enough star to make a black hole.
         </h6>
       </div>
-      <div class="images">
+      <div class="images bottom-images">
         <img class="image img-fluid" src="../../assets/img/blackhole/distant-blackhole.jpg" alt="Earth">
         <img class="image img-fluid" src="../../assets/img/blackhole/weird-light-hole.jpg" alt="Earth">
         <img class="image img-fluid" src="../../assets/img/blackhole/black-hole-event.jpg" alt="Earth">
       </div>
       <section class="video">
         <iframe width="660" height="400" src="https://www.youtube.com/embed/e-P5IFTqB98?controls=0&amp;start=4" frameborder="0" allow="autoplay; encrypted-media" class="embed-responsive" allowfullscreen></iframe>
-        <iframe width="660" height="400" src="https://www.youtube-nocookie.com/embed/yWO-cvGETRQ?controls=0&amp;start=612" frameborder="0" allow="autoplay; encrypted-media" class="embed-responsive" allowfullscreen></iframe>
       </section>
     </div>
 
@@ -84,43 +83,70 @@ li {
   margin-bottom: 15px;
 }
 
-.video iframe {
-  display: none;
+.video {
+  display:flex;
+  flex-flow:column;
+  justify-content:space-evenly;
+  max-width:90%;
+  align-items:center;
 }
 
-/* MEDIUM UP */
+/******* MEDIUM UP *******/
 @media screen and (min-width: 991px) {
   #black-holes {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 80px auto 500px;
     align-items: start;
+    width:100%;
+    grid-template-columns:1fr;
+    grid-template-rows: 80px 350px auto 350px auto;
+
   }
 
   #title {
+    grid-row: 1 / 2;
     grid-column: 1 / -1;
     font-size: 1.5rem;
-    margin-bottom: 15px;
+    margin-top:30px;
+    margin-bottom: 10px;
   }
 
   #info {
     font-size: 2rem;
     padding: 10px;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
   }
 
+  .top-images {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    display:flex;
+  }
+
+  .bottom-images {
+    display:flex;
+    grid-row: 4 / 5;
+    grid-column: 1 / -1;
+  }
   .image {
     margin-bottom: 30px;
+    width:32%;
+  }
+
+  .image:hover {
+    transform: sclae(1.5);
   }
 
   .video {
     grid-column: 1 / -1;
-    display: flex;
+    grid-row: 5 / 6;
+    flex-flow:row;
+    justify-content:center;
+    max-width:80%;
+    align-items:center;
   }
 
-  .video iframe {
-    margin: 30px;
-    width: 660;
-    height: 400;
-  }
+
+
 }
 </style>

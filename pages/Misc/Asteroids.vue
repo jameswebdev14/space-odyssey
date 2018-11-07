@@ -41,7 +41,7 @@
         <span class="highlight_text">Spectral classification</span><br>
         In 1975, an asteroid taxonomic system based on color, albedo, and spectral shape was developed by Clark R. Chapman, David Morrison, and Ben Zellner.[83] These properties are thought to correspond to the composition of the asteroid's surface material. The original classification system had three categories: C-types for dark carbonaceous objects (75% of known asteroids), S-types for stony (silicaceous) objects (17% of known asteroids) and U for those that did not fit into either C or S. This classification has since been expanded to include many other asteroid types. The number of types continues to grow as more asteroids are studied.
         The two most widely used taxonomies now used are the Tholen classification and SMASS classification. The former was proposed in 1984 by David J. Tholen, and was based on data collected from an eight-color asteroid survey performed in the 1980s. This resulted in 14 asteroid categories.[84] In 2002, the Small Main-Belt Asteroid Spectroscopic Survey resulted in a modified version of the Tholen taxonomy with 24 different types. Both systems have three broad categories of C, S, and X asteroids, where X consists of mostly metallic asteroids, such as the M-type. There are also several smaller classes.[85]
-        The proportion of known asteroids falling into the various spectral types does not necessarily reflect the proportion of all asteroids that are of that type; some types are easier to detect than others, biasing the totals. <br>
+        The proportion of known asteroids falling into the various spectral types does not necessarily reflect the proportion of all asteroids that are of that type; some types are easier to detect than others, biasing the totals. <br><br>
         <span class="highlight_text">What Is The Difference Between Asteroids and Meteorites?</span> <br>
         In simplest terms here are the definitions:<br>
         Asteroid: a large rocky body in space, in orbit around the Sun.<br>
@@ -78,11 +78,7 @@
         <img class="image img-fluid" src="../../assets/img/comets/inpact.jpg" alt="Earth">
         <img class="image img-fluid" src="../../assets/img/comets/asteroid_water.jpg" alt="Earth">
       </div>
-      <section class="video">
-
-      </section>
     </div>
-
   </div>
 </template>
 
@@ -119,33 +115,56 @@ li {
   text-align: center;
 }
 
+.image {
+  width:90%;
+  margin: 20px auto;
+  max-width:300px;
+}
+
 /* MEDIUM UP */
 @media screen and (min-width: 991px) {
   #asteroids {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 80px auto 500px;
+    width:100%;
+    grid-template-columns:1fr;
+    grid-template-rows: 50px 250px auto 250px;
     align-items: start;
   }
 
   #title {
-    grid-column: 1 / -1;
+    grid-row: 1 / 2;
     font-size: 1.5rem;
     margin-bottom: 15px;
   }
 
   #info {
-    font-size: 2rem;
+    font-size: 1.2rem;
     padding: 10px;
+    grid-row: 3 / 4;
   }
 
-  .images-top,
+  .images-top {
+    grid-row: 2 / 3;
+    display:flex;
+    justify-content: space-between
+  }
+
   .images-bottom {
-    margin: 0 20px;
+    grid-row: 4 / 5;
+    display:flex;
+    justify-content: space-between
   }
 
   .image {
-    margin-bottom: 30px;
+    margin: 15px;
+    margin:auto;
+    width:30%;
+    max-width:400px;
+  }
+
+  .image:hover {
+    cursor:pointer;
+    transform: scale(2);
   }
 }
 
@@ -153,13 +172,13 @@ li {
 @media screen and (min-width: 1300px) {
   #asteroids {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 80px auto 500px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 500px auto 500px;
     align-items: start;
   }
 
   #title {
-    grid-column: 1 / -1;
+    grid-row: 1 / 2;
     font-size: 1.5rem;
     margin-bottom: 15px;
   }
@@ -167,15 +186,27 @@ li {
   #info {
     font-size: 2rem;
     padding: 10px;
+    grid-row: 3 / 4;
   }
 
   .images {
     margin: 0 20px;
   }
 
+  .images-top {
+    grid-row: 2 / 3;
+  }
+
+  .images-bottom {
+    grid-row: 4 / 5;
+
+  }
+
   .image {
     margin-bottom: 30px;
   }
+
+
 }
 </style>
 

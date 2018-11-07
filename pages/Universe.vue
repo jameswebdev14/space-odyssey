@@ -1,6 +1,6 @@
 <template>
 <div id="universe">
-  <section id="title-section">
+  <section class="title-section">
     <h2 class="page-title">The Universe</h2>
     <h4 class="page-subtitle">- everything there is</h4>
   </section>
@@ -22,7 +22,7 @@
   </section>
   <section id="universe_text">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/HdPzOWlLrbE?rel=0" frameborder="0" allow="autoplay; encrypted-media" class="embed-responsive" allowfullscreen></iframe>
-    <h5>
+    <h6>
     The Universe is everything we can touch, feel, sense, measure or detect. It includes living things, planets, stars, galaxies, dust clouds, light, and even time.<br>
     Before the birth of the Universe, time, space and matter did not exist.<br>
     The Universe contains billions of galaxies, each containing millions or billions of stars. The space between the stars and galaxies is largely empty. However, even places far from stars and planets contain scattered particles of dust or a few hydrogen atoms per cubic centimeter.<br>
@@ -82,7 +82,7 @@
     Scientists can also tell that there is some unknown material in the space between the stars, because its gravitational pull influences the path of starlight travelling towards Earth. Matter – both ordinary and dark - can act like a magnifying glass, bending and distorting light from galaxies and clusters behind it. Astronomers can use this effect, called gravitational lensing, to map the distribution of dark matter.
     Only about 15% of the matter in the Universe is made of atoms. The remainder is dark matter. However, no one knows what dark matter is made of. We do know that it does not absorb, emit or reflect light, because none of our scientific instruments can directly detect it.<br>
     Many scientists believe that most dark matter is some unknown subatomic (smaller than an atom) particle that interacts only very weakly with normal matter. If this is true, billions of these particles will have passed through your body by the time you finish reading this. Experiments buried deep underground may one day measure the presence of one such particle passing through, finally solving the mystery of what dark matter really is.
-    </h5>
+    </h6>
   </section>
   <section id="right_side_images">
     <div class="images">
@@ -125,10 +125,6 @@
 
 #right_side_images {
   order: 3;
-}
-
-#universe h5 {
-  font-size: 1rem;
 }
 
 .images img {
@@ -216,8 +212,12 @@
     margin-bottom: 0;
   }
 
-  #title-section {
+  .title-section {
     grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    margin-bottom: 15px;
+    display: flex;
+    align-items:baseline;
   }
 }
 </style>

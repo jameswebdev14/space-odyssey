@@ -1,5 +1,5 @@
 <template>
-  <div id="" class="planet">
+  <div class="planet">
     <div id="images">
       <img src="../../assets/img/planets/pluto.jpg" alt="Pluto" class="planet_images img-fluid">
       <img src="../../assets/img/planets/pluto2.jpg" alt="Pluto" class="planet_images img-fluid">
@@ -46,5 +46,5 @@
 </template>
 
 
-<style>
+<style scoped>
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div id="" class="planet">
+  <div class="planet">
     <div id="images">
       <img class="planet_images img-fluid"  src="../../assets/img/planets/mars5.jpg" alt="Mars">
       <img class="planet_images img-fluid"  src="../../assets/img/planets/mars-red.jpg" alt="Mars">
@@ -73,7 +73,6 @@
       Phobos is gradually spiraling toward Mars, drawing about 6 feet (1.8 meters) closer to the red planet each century.
       Within 50 million years, Phobos will either smash into Mars or break up and form a ring of debris around the planet.
       Both moons are potential targets for exploration. One NASA plan envisions bombarding Phobos with small, spiky spherical rovers called hedgehogs.</h6>
-
     </div>
   </div>
 </template>
@@ -82,15 +81,10 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 @media screen and (min-width: 991px) {
   img {
     width: 600px;
-  }
-
-  .planet {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
   }
 }
 

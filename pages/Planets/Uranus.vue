@@ -1,5 +1,5 @@
 <template>
-<div id="" class="planet">
+<div class="planet">
   <div id="images">
     <img src="../../assets/img/planets/Uranus.jpg" alt="Uranus" class="planet_images img-fluid">
     <img src="../../assets/img/planets/Uranus2.jpg" alt="Uranus" class="planet_images img-fluid">
@@ -56,5 +56,5 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 </style>

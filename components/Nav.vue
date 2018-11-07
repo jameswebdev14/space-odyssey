@@ -1,9 +1,9 @@
 <template>
-  <b-navbar toggleable="lg" type="dark" variant="faded" ml-auto>
+  <b-navbar toggleable="lg" id="navbar" type="dark" variant="faded" ml-auto>
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
     <b-collapse is-nav id="nav_collapse">
       <no-ssr>
-        <b-navbar-nav>
+        <b-navbar-nav @click="close" id="menu">
           <b-nav-item href="#"><nuxt-link to="/" class="link">Home</nuxt-link></b-nav-item>
           <b-nav-item href="#"><nuxt-link to="/planets/earth" class="link">The Planets</nuxt-link></b-nav-item>
           <b-nav-item href="#"><nuxt-link to="/solarsystem" class="link">Our Solar System</nuxt-link></b-nav-item>
@@ -18,7 +18,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    close() {
+      document.getElementById("menu").close;
+    }
+  }
+};
 </script>
 
 <style>
@@ -42,8 +48,9 @@ export default {};
   color: red;
 }
 
-.navbar {
+#navbar {
   margin-bottom: 25px;
+  margin-top:20px;
 }
 
 /*****MEDIUM - LARGE VIEW*****/
@@ -74,9 +81,9 @@ export default {};
     margin: auto;
   }
 
-  .navbar {
-    height: 100px;
-    margin-top: 0;
+  #navbar {
+    height: 50px;
+    margin-top: 30px;
     padding-top: 0;
   }
 }

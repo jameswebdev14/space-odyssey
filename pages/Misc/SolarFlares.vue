@@ -123,11 +123,11 @@ iframe {
     grid-template-columns: 1 / -1;
     grid-template-rows: 3 / 4;
   }
-
+/*
   .info h6 {
     font-size: 1.3rem;
   }
-
+*/
   .video {
     grid-template-columns: 1 / -1;
     grid-template-rows: 4 / 5;

@@ -23,10 +23,10 @@
           Galaxies with less than a billion stars are considered "small galaxies." In our own galaxy, the sun is just one of about 100 billion stars.<br><br>
           <span class="highlight_text">Types of Galaxies</span><br>
           Galaxies are classified into three main types: <span class="emphasis">spiral galaxies</span>, <span class="emphasis">elliptical galaxies</span>, and <span class="emphasis">irregular galaxies</span><br><br>
-          <span class="emphasis">Spiral Galaxies</span>, such as the Milky Way, consist of a flat disk with a bulging center and surrounding spiral arms. The galaxy's disk includes stars, planets, dust, and gas—all of which rotate around the galactic center in a regular manner.
+          <span class="emphasis">Spiral Galaxies</span><br> such as the Milky Way, consist of a flat disk with a bulging center and surrounding spiral arms. The galaxy's disk includes stars, planets, dust, and gas—all of which rotate around the galactic center in a regular manner.
           This spinning motion, at speeds of hundreds of kilometers per second, may cause matter in the disk to take on a distinctive spiral shape like a cosmic pinwheel. Some spiral galaxies obtain even more interesting shapes that earn them descriptive names, such as sombrero galaxies.
           Older stars reside in the bulge at the center of the galactic disk. Many new stars also form in spiral systems, and their disks are surrounded by a halo, which scientists believe is rich with mysterious dark matter.<br><br>
-          <span class="emphasis">Elliptical Galaxies</span> are shaped as their name suggests.<br>They are generally round but stretch longer along one axis than along the other. They may be nearly circular or so elongated that they take on a cigarlike appearance.
+          <span class="emphasis">Elliptical Galaxies</span><br> are shaped as their name suggests.<br>They are generally round but stretch longer along one axis than along the other. They may be nearly circular or so elongated that they take on a cigarlike appearance.
           Elliptical galaxies contain many older stars, up to one trillion, but little dust and other interstellar matter. Their stars orbit the galactic center, like those in the disks of spiral galaxies, but they do so in more random directions. Few new stars are known to form in elliptical galaxies.<br>
           The universe's largest known galaxies are giant elliptical galaxies, which may be as much as two million light-years long. Elliptical galaxies may also be small, in which case they are dubbed dwarf elliptical galaxies.<br><br>
           <span class="emphasis">Irregular Galaxies</span><br>
@@ -63,27 +63,32 @@ li {
   margin-bottom: 10px;
 }
 
+.images {
+  width:100%;
+}
+
 /*  MEDIUM UP VIEW */
 @media screen and (min-width: 991px) {
   #galaxies {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 60px 450px auto;
-    align-items: start;
+
+    width:100%;
   }
 
   #title {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     font-size: 1.5rem;
-    margin-bottom: 15px;
+    padding-bottom: 25px;
     text-align: center;
   }
 
   #info {
     font-size: 2rem;
     padding: 10px;
-    grid-column: 1 / 5;
+    grid-column: 1 / 2;
     grid-row: 3 / 4;
   }
 
@@ -98,14 +103,8 @@ li {
     justify-content: space-between;
   }
 
-  .images-bottom {
-    grid-column: 1 / -1;
-    grid-row: 4 / 5;
-    display: flex;
-    justify-content: space-around;
-  }
-
   .image {
+    width:100%;
     max-width: 450px;
     height: 350px;
     margin-bottom: 5px;

@@ -74,7 +74,7 @@ li {
   #nebula {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 450px auto;
+    grid-template-rows: 60px 500px auto;
     align-items: start;
   }
 
@@ -105,17 +105,11 @@ li {
     justify-content: space-between;
   }
 
-  .images-bottom {
-    grid-column: 1 / -1;
-    grid-row: 4 / 5;
-    display: flex;
-    justify-content: space-around;
-  }
-
   .image {
+    width:100%;
+    height: 420px;
     max-width: 450px;
-    height: 350px;
-    margin-bottom: 5px;
+    max-height: 450px;
   }
 
   p {

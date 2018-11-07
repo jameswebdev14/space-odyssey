@@ -1,5 +1,5 @@
 <template>
-<div class="container-fluid">
+<div class="container-fluid main">
   <section class="top_image_bar">
     <div id="image_row">
       <img src="/img/oursolarsystem.jpg" alt="Solar System" class="img-fluid">
@@ -21,7 +21,7 @@
       <news v-bind:nasa_data=nasa_data></news>
     </section>
     <section id="content">
-      <h5>Space trip through our solar system</h5>
+      <h5>Enjoy a space trip through our solar system</h5>
       <div class="embed-responsive embed-responsive-16by9 m-auto">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/m1EBHOmXSqA?rel=0&amp;controls=0&amp;showinfo=0&amp;start=32" allowfullscreen></iframe>
       </div>
@@ -53,7 +53,7 @@ export default {
 
 <style>
 /*****DEFAULT MOBILE*****/
-.container-fluid {
+.main {
   min-height: 100vh;
   display: flex;
   flex-flow: column;
@@ -63,7 +63,7 @@ export default {
 #main_section {
   display: flex;
   flex-flow: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   width: 100%;
 }
@@ -87,10 +87,11 @@ export default {
   margin-bottom: 30px;
 }
 
-#intro h4 {
+#intro h3 {
   text-align: center;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px red;
 }
 
 iframe {
@@ -99,6 +100,19 @@ iframe {
   border: 2px ridge #526488;
   margin: auto;
   width: 650px;
+}
+
+#news {
+  order: 2;
+  margin-top: 40px;
+  width: 100%;
+  padding: 0 10px 10px 10px;
+}
+
+#quiz {
+  margin-top: 15px;
+  order: 3;
+  width:100%;
 }
 
 #content {
@@ -128,21 +142,15 @@ iframe {
   display: none;
 }
 
-#news {
-  order: 2;
-  margin-top: 40px;
-}
 
-#quiz {
-  margin: auto;
-  margin-top: 30px;
-  order: 3;
-}
 
 /*****MEDIUM UP********/
 @media screen and (min-width: 991px) and (max-width: 1450px) {
-  .container-fluid {
-    padding: 0 30px;
+  .main {
+    padding: 10px;
+    display:grid;
+    grid-template-rows: 160px 100px auto;
+
   }
 
   .top_image_bar {
@@ -155,10 +163,7 @@ iframe {
   #image_row {
     display: flex;
     justify-content: center;
-    position: absolute;
-    top: 250px;
-    left: 0;
-    height: 160px;
+    height: 150px;
     width: 100vw;
     border-top: 5px ridge grey;
     border-bottom: 5px ridge grey;
@@ -175,34 +180,39 @@ iframe {
     color: #c0c0c0;
     text-align: center;
     width: 100%;
-    margin-top: 200px;
+    margin-top: 80px;
+    margin-bottom:30px;
     height: 80px;
   }
 
   #main_section {
-    margin-top: 0;
+    margin-top: 90px;
+    padding:20px;
     width: 100%;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto;
-    justify-content: center;
+    justify-content: start;
     align-items: start;
   }
 
-  #intro h4 {
+  #intro h3 {
     text-align: center;
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px red;
   }
 
   #content {
     grid-row: 1 / 2;
-    grid-column: 2 / 3;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 80%;
-    margin: 40px auto;
+    grid-column: 1 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   #content h5 {
@@ -211,18 +221,26 @@ iframe {
     letter-spacing: 2px;
   }
 
+  #content div {
+    margin: auto;
+  }
+
   #quiz {
     grid-row: 2 / 3;
-    grid-column: 1 / -1;
+    grid-column: 2 / -1;
+    margin: 0 auto;
+    width:100%;
+    padding: 0 15px 15px 15px;
   }
 
   #news {
-    grid-row: 1 / 2;
+    grid-row: 2 / 3;
     grid-column: 1 / 2;
+    margin: 0 auto;
+    padding: 0 15px 15px 15px;
   }
 
   iframe {
-    max-width: 600px;
     width: 100%;
     margin: auto;
     margin-top: 20px;
@@ -231,9 +249,15 @@ iframe {
 
 /*  LARGE SCREENS  */
 @media screen and (min-width: 1451px) {
+  .main {
+    padding: 0 30px;
+    display:grid;
+    grid-template-rows: 200px 100px auto;
+  }
+
   #main_section {
     margin-top: 0;
-    padding-top: 0;
+    padding: 0 40px;
     width: 100%;
     display: grid;
     grid-gap: 10px;
@@ -245,15 +269,11 @@ iframe {
 
   .top_image_bar {
     display: block;
-    margin-bottom: 150px;
   }
 
   #image_row {
     display: flex;
     justify-content: center;
-    position: absolute;
-    top: 250px;
-    left: 0;
     height: 160px;
     width: 100vw;
     border-top: 5px ridge grey;
@@ -267,21 +287,43 @@ iframe {
     overflow: hidden;
   }
 
+  #news {
+    margin: 0;
+    width:100%;
+    padding: 0 15px 15px 15px;
+  }
+
+  #quiz {
+    margin: 0;
+    width:100%;
+    padding: 0 15px 15px 15px;
+  }
+
   #content {
     align-items: center;
     justify-content: center;
-    width: 100%;
     margin: 0;
-    padding-top: 40px;
+    width: 100%;
+    /*margin: 0;*/
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   #content h5 {
     font-size: 1.7rem;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
 
   #content div {
     margin-top: 0;
   }
+
+  #intro h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 2px 2px red;
+  }
+
+
 }
 </style>

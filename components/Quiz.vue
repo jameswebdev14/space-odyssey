@@ -15,7 +15,7 @@
       <p class="question-index">{{ currentQuestion.key }}. <span class="question-text">{{ currentQuestion.question }}</span></p>
     </section>
     <section class="answer-section">
-    <!-- Display Answers -->
+      <!-- Display Answers -->
       <div><input type="radio" class="answer-input" name="answer" :value='currentQuestion.answers[0].answer' v-model="selectedAnswer">{{ currentQuestion.answers[0].answer }}</div>
       <div><input type="radio" class="answer-input" name="answer" :value='currentQuestion.answers[1].answer' v-model="selectedAnswer">{{ currentQuestion.answers[1].answer }}</div>
       <div><input type="radio" class="answer-input" name="answer" :value='currentQuestion.answers[2].answer' v-model="selectedAnswer">{{ currentQuestion.answers[2].answer }}</div>
@@ -86,6 +86,7 @@ export default {
       this.test[this.index].selectedAnswer = this.selectedAnswer;
       this.index += 1;
       this.currentQuestion = this.test[this.index];
+      this.selectedAnswer = "";
       if (this.index >= 10) {
         this.index = 0;
         this.showResult = true;
@@ -142,6 +143,12 @@ export default {
 
 <style scoped>
 /* MOBILE DEFAULT VIEW */
+#quiz {
+  background-color: rgba(0, 0, 0, 0.5);
+  width:100%;
+  padding:20px;
+}
+
 #level {
   margin: 0 40px;
   display: flex;
@@ -262,7 +269,7 @@ ul {
 }
 
 #quiz-section-title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
   color: #c0c0c0;
   text-shadow: 2px 0 red;
@@ -270,9 +277,14 @@ ul {
 
 /* MEDIUM UP VIEW */
 @media screen and (min-width: 991px) {
+  #quiz {
+    width:100%;
+    padding: 0 20px 20px 20px;
+  }
+
   #quiz-section-title {
     font-size: 1.7rem;
-    margin-top: -20px;
+    margin-top: 0;
     margin-bottom: 20px;
     text-shadow: 2px 0 red;
   }

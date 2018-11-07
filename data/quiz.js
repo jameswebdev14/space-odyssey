@@ -196,15 +196,15 @@ export const standard_quiz = [{
         question: 'How many stars are in the Milky Way?',
         answers: [{
                 key: 1,
-                answer: 'Over 100 billion.?'
+                answer: 'Over 100 billion'
             },
             {
                 key: 2,
-                answer: '559'
+                answer: 'between 560,000 and 650,000'
             },
             {
                 key: 3,
-                answer: '168,888'
+                answer: 'under 368,000'
             }
         ],
         correctKey: 1,

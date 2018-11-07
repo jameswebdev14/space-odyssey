@@ -29,6 +29,7 @@
   display: flex;
   color: #c0c0c0;
   flex-flow: column;
+  height:100%;
 }
 
 #links {
@@ -47,8 +48,10 @@
 #links ul li {
   display: flex;
   flex-wrap: wrap;
-  padding: 5px;
-  font-size: 0.8rem;
+  margin:auto;
+  margin-bottom:25px;
+  padding: 8px;
+  font-size: 1rem;
   align-items: center;
   justify-content: center;
 }
@@ -80,8 +83,8 @@ span {
     padding-left: 30px;
     justify-items: start;
     align-items: start;
-    justify-content: flex-start;
     position: fixed;
+
   }
 
   #lead {
@@ -97,16 +100,17 @@ span {
 
   #links ul li {
     list-style: none;
+    margin:0;
     padding: 10px;
     font-size: 1rem;
   }
 
   #intro {
-    text-align: left;
+    text-align: center;
   }
 
   .content {
-    grid-column: 2 / -1;
+    grid-column: 2 / 3;
     grid-row: 1 / -1;
     padding: 0 50px;
   }

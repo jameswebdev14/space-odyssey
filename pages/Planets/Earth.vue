@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="planet">
       <div class="images">
         <img class="planet_images img-fluid" src="../../assets/img/planets/earth.jpg" alt="Earth" style="float:left;">
@@ -52,7 +51,7 @@
           </ul>
       </div>
     </div>
-  </div>
+
 </template>
 
 <script>
@@ -97,6 +96,10 @@ export default {};
     margin: 20px 0;
     padding-left: 0;
     font-size: 1.2rem;
+  }
+
+  .images {
+    justify-content: space-between;
   }
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div class="container moons">
-    <section id="title-section">
-      <h1 class="page-title">Moons</h1>
-      <h3 class="page-subtitle">   - companions </h3>
+    <section class="title-section">
+      <h1 class="page-title">Moons </h1>
+      <h3 class="page-subtitle">- companions </h3>
     </section>
     <section id="content">
       <section id="info">
@@ -63,6 +63,7 @@
 
 #info h5 {
   font-size: 1rem;
+  color: #c0c0c0;
 }
 
 #images img {
@@ -83,15 +84,18 @@
     grid-template-rows: 80px 1fr;
   }
 
-  #title-section {
+  .title-section {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     text-align: left;
+    margin-bottom: 15px;
+    display: flex;
+    align-items:baseline;
   }
 
   #title {
     font-size: 2.5rem;
-    margin-right: 20px;
+    color: #c0c0c0;
   }
 
   #subTitle {
