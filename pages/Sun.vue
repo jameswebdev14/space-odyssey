@@ -7,7 +7,7 @@
       </section>
       <section id="info">
         <img src="../assets/img/sun/sun_surface.jpg" class="image1 img-fluid"  style="float:left;"/>
-        <h5>
+        <h6>
           The Sun is by far the largest object in the solar system. It contains more than 99.8% of the total mass of the Solar System, <nuxt-link to="planets/jupiter">Jupiter</nuxt-link>
           contains most of the rest.<br>
           It is often said that the Sun is an "ordinary" star. That's true in the sense that there are many others similar to it.<br>
@@ -43,7 +43,7 @@
           The Sun is about 4.5 billion years old. Since its birth it has used up about half of the hydrogen in its core. It will continue to radiate "peacefully" for another 5 billion years or so (although its luminosity will approximately double in that time). But eventually it will run out of hydrogen fuel. It will then be forced into radical changes which, though commonplace by stellar standards, will result in the total destruction of the Earth (and probably the creation of a planetary nebula).<br><br>
           <span>The Sun's satellites</span><br>
           There are eight planets and a large number of smaller objects orbiting the Sun. (Exactly which bodies should be classified as planets and which as "smaller objects" has been the source of some controversy, but in the end it is really only a matter of definition.)<br><br>
-        </h5>
+        </h6>
       </section>
       <table class="table table-bordered">
         <tr>
@@ -144,14 +144,10 @@ li {
   margin-bottom: 5px;
 }
 
-#info {
+.info {
   margin-bottom: 30px;
   grid-column: 1 / 2;
   grid-row: 2 /3;
-}
-
-#info h5 {
-  font-size: 1rem;
 }
 
 .table {
@@ -170,6 +166,10 @@ li {
   margin: 20px 10px;
 }
 
+.info h6 {
+  text-align: left !important;
+}
+
 /* MEDIUM UP */
 @media screen and (min-width: 991px) {
   .container-fluid {
@@ -178,7 +178,6 @@ li {
     margin:auto;
   }
   #sun {
-    /*display: grid;*/
     grid-column-gap: 20px;
     width:100%;
     grid-template-columns: 1fr 1fr;
@@ -200,12 +199,8 @@ li {
     margin:10px;
   }
 
-  #info {
+  .info h6 {
     text-align:left;
-  }
-
-  .table {
-
   }
 
   .table th,

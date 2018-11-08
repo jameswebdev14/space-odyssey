@@ -112,13 +112,14 @@ body {
     font-style: italic;
 }
 
-#title {
+.title {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-shadow: 0 2px red;
     padding: 0;
     margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
 .image {
@@ -133,7 +134,7 @@ li {
     list-style: none;
 }
 
-#info h5 {
+.info h6 {
     color: #c0c0c0;
     font-size: 1rem;
 }
@@ -190,9 +191,12 @@ li {
         color: #c0c0c0;
         font-style: italic;
     }
-    #info h5 {
-        color: #c0c0c0;
+    .info h6 {
         font-size: 1.2rem;
+    }
+    .title {
+        margin-bottom: 25px;
+        font-size: 1.6rem;
     }
 }
 
@@ -272,8 +276,18 @@ li {
         color: #c0c0c0;
         font-style: italic;
     }
-    #info h5 {
-        color: #c0c0c0;
+    .info h6 {
         font-size: 1.4rem;
+    }
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+    .images-top {
+        grid-row: 2 / 3;
+        display: flex;
+        margin-top: 0;
+        padding-top: 0;
+        justify-content: space-between
     }
 }

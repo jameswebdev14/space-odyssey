@@ -1,8 +1,8 @@
 <template>
   <div>
     <div id="black-holes" class="misc">
-      <div id="title">BLACK HOLES</div>
-      <div class="images top-images">
+      <div class="title">BLACK HOLES</div>
+      <div class="images images-top">
         <img class="image img-fluid" src="../../assets/img/blackhole/heart-of-milky-way.jpg" alt="Earth">
         <img class="image img-fluid" src="../../assets/img/blackhole/star_black_hole.jpg" alt="Earth">
         <img class="image img-fluid" src="../../assets/img/blackhole/black-hole-event-horizon.jpg" alt="Earth">
@@ -69,16 +69,6 @@ li {
   list-style: none;
 }
 
-#title {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1rem;
-  text-shadow: 0 2px red;
-  padding: 0;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
 .image {
   margin-bottom: 15px;
 }
@@ -102,25 +92,11 @@ li {
 
   }
 
-  #title {
-    grid-row: 1 / 2;
-    grid-column: 1 / -1;
-    font-size: 1.5rem;
-    margin-top:30px;
-    margin-bottom: 10px;
-  }
-
   #info {
     font-size: 2rem;
     padding: 10px;
     grid-row: 3 / 4;
     grid-column: 1 / -1;
-  }
-
-  .top-images {
-    grid-row: 2 / 3;
-    grid-column: 1 / -1;
-    display:flex;
   }
 
   .bottom-images {
@@ -130,6 +106,7 @@ li {
   }
   .image {
     margin-bottom: 30px;
+    margin:10px;
     width:32%;
   }
 

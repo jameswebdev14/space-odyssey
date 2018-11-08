@@ -1,7 +1,7 @@
 <template>
 <div>
   <div id="galaxies" class="misc">
-    <div id="title">GALAXIES</div>
+    <div class="title">GALAXIES</div>
     <div class="images-top">
       <div>
         <img class="image img-fluid" src="../../assets/img/galaxies/milkyway1.jpg" alt="Earth">
@@ -77,14 +77,6 @@ li {
     width:100%;
   }
 
-  #title {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-    font-size: 1.5rem;
-    padding-bottom: 25px;
-    text-align: center;
-  }
-
   #info {
     font-size: 2rem;
     padding: 10px;
@@ -94,13 +86,6 @@ li {
 
   #info h6 {
     text-align: left;
-  }
-
-  .images-top {
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
-    display: flex;
-    justify-content: space-between;
   }
 
   .image {

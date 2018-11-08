@@ -1,6 +1,6 @@
 <template>
   <div id="gravity">
-    <div id="title">GRAVITY</div>
+    <div class="title">GRAVITY</div>
       <div class="images-top">
         <div>
           <img class="image img-fluid" src="../../assets/img/gravity/effects-of-gravity.gif" alt="Effects of Gravity">
@@ -77,15 +77,7 @@ ul {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 60px 450px auto;
-    
-  }
 
-  #title {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    text-align: center;
   }
 
   .info {
@@ -97,14 +89,6 @@ ul {
 
   .info-text {
     text-align:left;
-  }
-
-  .images-top {
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
-    display: flex;
-    justify-content: space-between;
-    max-height: 100%;
   }
 
   .image {

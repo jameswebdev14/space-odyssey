@@ -79,7 +79,6 @@ span {
   #links {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
-    padding-top: 60px;
     padding-left: 30px;
     justify-items: start;
     align-items: start;

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="asteroids" class="misc">
-      <div id="title">ASTEROIDS, METEORITES & COMETS</div>
+      <div class="title">ASTEROIDS, METEORITES & COMETS</div>
       <div class="images-top">
         <img class="image img-fluid" src="../../assets/img/comets/contact.jpg" alt="Earth">
         <img class="image img-fluid" src="../../assets/img/comets/incoming.jpg" alt="Earth">
@@ -105,16 +105,6 @@ li {
   display: block;
 }
 
-#title {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1rem;
-  text-shadow: 0 2px red;
-  padding: 0;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
 .image {
   width:90%;
   margin: 20px auto;
@@ -131,22 +121,10 @@ li {
     align-items: start;
   }
 
-  #title {
-    grid-row: 1 / 2;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-  }
-
   #info {
     font-size: 1.2rem;
     padding: 10px;
     grid-row: 3 / 4;
-  }
-
-  .images-top {
-    grid-row: 2 / 3;
-    display:flex;
-    justify-content: space-between
   }
 
   .images-bottom {
@@ -156,7 +134,7 @@ li {
   }
 
   .image {
-    margin: 15px;
+
     margin:auto;
     width:30%;
     max-width:400px;
@@ -175,12 +153,6 @@ li {
     grid-template-columns: 1fr;
     grid-template-rows: 80px 500px auto 500px;
     align-items: start;
-  }
-
-  #title {
-    grid-row: 1 / 2;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
   }
 
   #info {
@@ -204,6 +176,7 @@ li {
 
   .image {
     margin-bottom: 30px;
+    height: 400px;
   }
 
 

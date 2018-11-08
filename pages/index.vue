@@ -68,16 +68,6 @@ export default {
   width: 100%;
 }
 
-.title {
-  font-family: "montserrat", "Source Sans Pro", -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 1rem;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
 #intro {
   color: #c0c0c0;
   justify-content: center;

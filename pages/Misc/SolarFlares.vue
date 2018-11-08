@@ -1,8 +1,8 @@
 <template>
 <div>
   <div id="solarflares">
-    <div id="title">SOLAR FLARES & RADIATION</div>
-      <div class="images">
+    <div class="title">SOLAR FLARES & RADIATION</div>
+      <div class="images images-top">
         <img class="image img-fluid" src="../../assets/img/solarflares/solarflare4.png" alt="Solar Flare">
         <img class="image img-fluid" src="../../assets/img/solarflares/earth-solarflare.jpg" alt="Earth & Solar Flare">
         <img class="image img-fluid" src="../../assets/img/solarflares/solarflares2.jpg" alt="Solar Flare">
@@ -65,15 +65,6 @@
   padding: 5px;
 }
 
-#title {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1rem;
-  text-shadow: 0 2px red;
-  padding: 0;
-  margin-bottom: 15px;
-}
-
 .image {
   margin-bottom: 15px;
 }
@@ -100,13 +91,6 @@ iframe {
     grid-template-rows: 80px 320px auto;
     justify-content: start;
     align-items: start;
-  }
-
-  #title {
-    grid-column: 1 / -1;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    text-align: center;
   }
 
   .images {
