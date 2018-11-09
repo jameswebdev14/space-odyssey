@@ -7,7 +7,7 @@
         <img class="image img-fluid" src="../../assets/img/comets/incoming.jpg" alt="Earth">
         <img class="image img-fluid" src="../../assets/img/comets/vesta.jpg" alt="Earth">
       </div>
-      <div class="info">
+      <div>
         <h6 class="info">
         <span class="highlight_text">Asteroids</span><br>
         Asteroids are minor planets, especially of the inner Solar System. Larger asteroids have also been called planetoids. These terms have historically been applied to any astronomical object orbiting the Sun that did not resemble a planet-like disc and was not observed to have characteristics of an active comet such as a tail. As minor planets in the outer Solar System were discovered they were typically found to have volatile-rich surfaces similar to comets. As a result, they were often distinguished from objects found in the main asteroid belt.<br>
@@ -105,6 +105,11 @@ li {
   display: block;
 }
 
+.info {
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
 .image {
   width:90%;
   margin: 20px auto;
@@ -121,7 +126,7 @@ li {
     align-items: start;
   }
 
-  #info {
+  .info {
     font-size: 1.2rem;
     padding: 10px;
     grid-row: 3 / 4;
@@ -155,9 +160,9 @@ li {
     align-items: start;
   }
 
-  #info {
-    font-size: 2rem;
-    padding: 10px;
+  .info {
+    font-size: 1.7rem;
+    padding: 20px;
     grid-row: 3 / 4;
   }
 

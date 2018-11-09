@@ -27,9 +27,10 @@
   </div>
   <section class="result-section" v-if="showResult">
     <b-alert  variant="success" show>Thank you for completing the quiz. You scored {{ score }} out of 10</b-alert>
-    <b-btn v-b-modal.modal1>review</b-btn>
+    <b-btn v-b-modal.modal>review</b-btn>
+
     <!-- Modal Component -->
-    <b-modal id="modal1" title="Your Results" :body-bg-variant="bodyBgVariant">
+    <b-modal id="modal" title="Your Results" :body-bg-variant="bodyBgVariant" size="lg">
       <ul>
         <li v-for="item in test" :key="item.key" style="margin-bottom:10px;" :class="{incorrect : item.status === 'incorrect'}">
           <div>
@@ -293,6 +294,14 @@ ul {
     text-shadow: 0 2px navy;
     font-size: 1.2rem;
     margin-bottom: 15px;
+  }
+
+  #modal {
+
+  }
+
+  .modal-content {
+    width:900px;
   }
 }
 </style>

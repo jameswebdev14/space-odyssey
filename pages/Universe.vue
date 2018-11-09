@@ -4,24 +4,24 @@
     <h2 class="page-title">The Universe</h2>
     <h4 class="page-subtitle">- everything there is</h4>
   </section>
+  <iframe width="560" height="400" src="https://www.youtube.com/embed/HdPzOWlLrbE?rel=0" frameborder="0" allow="autoplay; encrypted-media" class="embed-responsive" allowfullscreen></iframe>
   <section id="left_side_images">
     <div class="images">
       <p class="highlight_text image_label">Center of the Universe</p>
       <img src="../assets/img/universe/universe_center.jpg" alt="Universe" class="img-fluid">
-      <p class="highlight_text image_label">Universe Expanded</p>
-      <img src="../assets/img/universe/universe_expansion.jpg" alt="Universe" class="img-fluid">
+      <p class="highlight_text image_label d-none d-md-block">Universe Expanded</p>
+      <img src="../assets/img/universe/universe_expansion.jpg" alt="Universe" class="img-fluid d-none d-md-block">
       <p class="highlight_text image_label">Universe Squeezed into one image</p>
       <img src="../assets/img/universe/universe_squeezed.jpg" alt="Universe" class="img-fluid">
       <p class="highlight_text image_label">Strangest Black Hole in the Universe</p>
       <img src="../assets/img/universe/blackhole.jpg" alt="Universe" class="img-fluid">
       <p class="highlight_text image_label">Hubble Exploration Image</p>
       <img src="../assets/img/universe/hubble_exploration.jpg" alt="Universe" class="img-fluid">
-      <p class="highlight_text image_label">The Bubble Nebula</p>
-      <img src="../assets/img/universe/bubble_nebula.jpg" alt="Universe" class="img-fluid">
+      <p class="highlight_text image_label d-none d-md-block">The Bubble Nebula</p>
+      <img src="../assets/img/universe/bubble_nebula.jpg" alt="Universe" class="img-fluid d-none d-md-block">
     </div>
   </section>
   <section id="universe_text" class="info">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/HdPzOWlLrbE?rel=0" frameborder="0" allow="autoplay; encrypted-media" class="embed-responsive" allowfullscreen></iframe>
     <h6>
     The Universe is everything we can touch, feel, sense, measure or detect. It includes living things, planets, stars, galaxies, dust clouds, light, and even time.<br>
     Before the birth of the Universe, time, space and matter did not exist.<br>
@@ -46,8 +46,9 @@
     </h6>
   </section>
   <div id="extended">
-    <h6>
+      <img src="../assets/img/universe/big-bang-theory.jpg" id="bang-img" alt="Big Bang Theory" class="img-fluid">
       <span class="highlight_text">The Big Bang</span><br>
+      <h6>
       Most astronomers believe the Universe began in a Big Bang about 14 billion years ago. At that time, the entire Universe was inside a bubble that was thousands of times smaller than a pinhead. It was hotter and denser than anything we can imagine.<br>
       Then it suddenly exploded.<br>
       The Universe that we know was born. Time, space and matter all began with the Big Bang. In a fraction of a second, the Universe grew from smaller than a single atom to bigger than a galaxy. And it kept on growing at a fantastic rate. It is still expanding today.
@@ -59,8 +60,6 @@
       The only direct evidence of the Big Bang itself is a faint glow in space. Spacecraft and telescopes on balloons see this as a patchy pattern of slightly warmer and cooler gas all around us. These ripples also show where the hydrogen clouds were slightly denser.
       As millions of years passed, the dense areas pulled in material because they had more gravity. Finally, about 100 million years after the Big Bang, the gas became hot and dense enough for the first stars to form.
       New stars were being born at a rate 10 times higher than in the present-day Universe. Large clusters of stars soon became the first galaxies.
-      Hyperactive galaxy
-      Hubble's newest camera eyes hotbed of star formation
       The Hubble Space Telescope and powerful ground-based telescopes are now beginning to find galaxies that were created about one billion years after the Big Bang. These small galaxies were much closer together than galaxies are today. Collisions were common.<br>
       Like two flames moving towards each other, they merged into bigger galaxies. Our Milky Way galaxy came together in this way.<br><br>
       <span class="highlight_text">What is Space?</span><br>
@@ -94,12 +93,12 @@
       <img src="../assets/img/universe/universe1.jpg" alt="Universe" class="img-fluid">
       <p class="highlight_text image_label">Where we are in the Universe</p>
       <img src="../assets/img/universe/you-are-here.jpg" alt="Universe. We are here" class="img-fluid">
-      <p class="highlight_text image_label">Massive Object in the Universe</p>
-      <img src="../assets/img/universe/massive_object.jpg" alt="Massive Object" class="img-fluid">
+      <p class="highlight_text image_label d-none d-md-block">Massive Object in the Universe</p>
+      <img src="../assets/img/universe/massive_object.jpg" alt="Massive Object" class="img-fluid d-none d-md-block">
       <p class="highlight_text image_label">Bigger than we thought</p>
       <img src="../assets/img/universe/universe_bigger.jpg" alt="Universe" class="img-fluid">
-      <p class="highlight_text image_label">Universe collapse</p>
-      <img src="../assets/img/universe/universe_collapse.jpeg" alt="Universe Collapse" class="img-fluid">
+      <p class="highlight_text image_label d-none d-md-block">Universe collapse</p>
+      <img src="../assets/img/universe/universe_collapse.jpeg" alt="Universe Collapse" class="img-fluid d-none d-md-block">
       <p class="highlight_text image_label">After the Big Bang</p>
       <img src="../assets/img/universe/universe_afterbigbang.jpg" alt="Universe" class="img-fluid">
       <p class="highlight_text image_label">Universe through time</p>
@@ -146,12 +145,18 @@
   margin-bottom: 13px;
 }
 
-#title {
-  text-align: center;
+iframe {
+    width:100%;
+    height:300px;
 }
 
 #extended {
   order: 3;
+}
+
+#bang-img {
+  max-width:100%;
+  margin:20px auto;
 }
 /*  MEDIUM UP VIEW */
 @media screen and (min-width: 991px) {
@@ -162,44 +167,62 @@
   #universe {
     margin: 0 30px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 80px auto auto auto;
+    grid-template-columns: 400px 600px 400px;
+    grid-template-rows: 80px 430px auto auto auto auto;
   }
 
   #universe_text {
     padding: 15px;
     font-size: 2rem;
     grid-column: 2 / 3;
-
+    grid-row: 3 / -1;
   }
 
-   #extended h6 {
-    padding: 15px;
-    font-size: 1.4rem;
-   }
-
-  #universe_text iframe {
-    width: 100%;
-    margin-bottom: 20px;
+  iframe {
+    width:800px;
+    max-width: 70%;
+    height:400px;
+    max-height: 400px;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    justify-self:center;
+    align-self: start;
   }
 
   #left_side_images {
     grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     justify-content: center;
     margin: 0 auto;
   }
 
   #right_side_images {
     grid-column: 3 / 4;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     justify-content: center;
     margin: 0 auto;
+  }
+
+  #left_side_images img, #right_side_images img {
+    width:100%;
+    max-width:400px;
   }
 
   #extended {
     grid-row: 4 / 5;
     grid-column: 1 / -1;
+    display:flex;
+    flex-flow:column;
+  }
+
+  #extended h6, #extended span {
+    padding: 15px;
+    font-size: 1.4rem;
+   }
+
+  #bang-img {
+    max-width:750px;
+    margin:30px auto;
   }
 
   #universe_img {
@@ -236,5 +259,9 @@
     display: flex;
     align-items:baseline;
   }
+
+
 }
+
+
 </style>

@@ -33,8 +33,6 @@
           That means even if you could travel at the speed of light, it would still take you 700 years to get there! <br><br>
           <span class="highlight_text">How do we know what nebulae look like?</span>
           Astronomers use very powerful telescopes to take pictures of faraway nebulae. Space telescopes such as NASA's Spitzer Space Telescope and Hubble Space Telescope have captured many images of faraway nebulae.
-
-
       </h6>
     </div>
   </div>

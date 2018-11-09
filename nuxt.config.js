@@ -44,7 +44,9 @@ module.exports = {
     /*
      ** Plugins to load before mounting the App
      */
-    plugins: [],
+    plugins: [
+
+    ],
 
     /*
      ** Nuxt.js modules
@@ -53,7 +55,9 @@ module.exports = {
         // Doc: https://github.com/nuxt-community/axios-module#usage
         '@nuxtjs/axios',
         // Doc: https://bootstrap-vue.js.org/docs/
-        'bootstrap-vue/nuxt'
+        'bootstrap-vue/nuxt',
+        /*'@nuxtjs/v-lazy-image'*/
+
     ],
     /*
      ** Axios module configuration

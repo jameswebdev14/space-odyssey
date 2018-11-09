@@ -1,9 +1,9 @@
 <template>
-  <b-navbar toggleable="lg" id="navbar" type="dark" variant="faded" ml-auto>
+  <b-navbar toggleable="lg" id="navbar" type="dark" variant="faded" ml-auto @click="close">
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
     <b-collapse is-nav id="nav_collapse">
       <no-ssr>
-        <b-navbar-nav @click="close" id="menu">
+        <b-navbar-nav>
           <b-nav-item href="#"><nuxt-link to="/" class="link">Home</nuxt-link></b-nav-item>
           <b-nav-item href="#"><nuxt-link to="/planets/earth" class="link">The Planets</nuxt-link></b-nav-item>
           <b-nav-item href="#"><nuxt-link to="/solarsystem" class="link">Our Solar System</nuxt-link></b-nav-item>
@@ -21,7 +21,8 @@
 export default {
   methods: {
     close() {
-      document.getElementById("menu").close;
+      console.log('closing menu');
+      document.getElementById("nav_collapse").setAttribute('collapsed', 'true');
     }
   }
 };
