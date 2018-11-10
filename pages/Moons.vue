@@ -11,7 +11,7 @@
           Planets and asteroids orbit the Sun. Moons—also known as natural satellites—orbit planets and asteroids.<br>
           Moons come in many shapes, sizes and types. Most are airless, but a few have atmospheres and even hidden oceans. There are hundreds of moons in our solar system—even a few asteroids have small companion moons.<br>
           Moons - also called natural satellites—come in many shapes, sizes and types. They are generally solid bodies, and few have atmospheres.<br>
-          <figure style="float:left;">
+          <figure style="float:left;" class="text-focus-in">
             <img src="../assets/img/moon/moons1.png" class="img-fluid"/>
             <p class="caption">Major Moons of our Solar System</p>
           </figure>
@@ -24,7 +24,7 @@
           Of the terrestrial (rocky) planets of the inner solar system, neither Mercury nor Venus have any moons at all, Earth has one and Mars has its two small moons.<br>In the outer solar system, the gas giants Jupiter and Saturn and the ice giants Uranus and Neptune have numerous moons. As these planets grew in the early solar system, they were able to capture objects with their large gravitational fields.<br>
           Earth's Moon probably formed when a large body about the size of Mars collided with Earth, ejecting a lot of material from our planet into orbit. Debris from the early Earth and the impacting body accumulated to form the Moon approximately 4.5 billion years ago (the age of the oldest collected lunar rocks). Twelve American astronauts landed on the Moon during NASA's Apollo program from 1969 to 1972, studying the Moon and bringing back rock samples.
           Usually the term moon brings to mind a spherical object, like Earth's Moon. The two moons of Mars, Phobos and Deimos, are different. While both have nearly circular orbits and travel close to the plane of the planet's equator, they are lumpy and dark. Phobos is slowly drawing closer to Mars and could crash into the planet in 40 or 50 million years. Or the planet's gravity might break Phobos apart, creating a thin ring around Mars.<br><br>
-          <figure style="float:right;">
+          <figure style="float:right;" class="text-focus-in">
             <img src="../assets/img/moon/jupiter-moons.jpg" class="img-fluid"/>
             <p class="caption">Jupiter's Moons</p>
           </figure>
@@ -38,11 +38,11 @@
         </h6>
       </section>
       <section id="images">
-        <figure class="figure1">
+        <figure class="figure1 text-focus-in">
           <img src="../assets/img/moon/moons-origin.jpg" class="img-fluid"/>
           <p class="caption">Origin of the Moon</p>
         </figure>
-        <figure class="figure1">
+        <figure class="figure1 text-focus-in">
           <img src="../assets/img/moon/ceres-layers.png" class="img-fluid"/>
           <p class="caption">Ceres Structure</p>
         </figure>

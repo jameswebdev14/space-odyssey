@@ -1,6 +1,6 @@
 <template>
   <div id="footer">
-    <h6>&copy Nigel Wheeldon 2017</h6>
+    <h6>&copy; Nigel James Wheeldon 2017</h6>
   </div>
 </template>
 
@@ -14,6 +14,6 @@
   height: 25px;
   margin-top:20px;
   position: relative;
-  
+
 }
 </style>

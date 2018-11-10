@@ -11,11 +11,13 @@
         "generate": "nuxt generate"
     },
     "dependencies": {
+        "@kevindesousa/vue-image-loader": "^2.0.1",
         "@nuxtjs/axios": "^5.0.0",
-        "bootstrap": "^4.0.0-beta.2",
+        "bootstrap": "^4.1.0",
         "bootstrap-vue": "^1.0.2",
         "nuxt": "^1.0.0",
-        "v-lazy-image": "^1.2.2"
+        "v-lazy-image": "^1.2.2",
+        "vue-tiny-lazyload-img": "0.0.3"
     },
     "devDependencies": {
         "cross-env": "^5.0.1"

@@ -33,10 +33,13 @@ body {
 
 #main-subTitle {
     display: inline-block;
-    font-size: 1.3rem;
-    color: #c0c0c0;
+    font-size: 1.4rem;
+    /*color: #c0c0c0;*/
     margin-top: 10px;
     align-items: flex-end;
+    color: black;
+    letter-spacing: 3px;
+    text-shadow: -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red;
 }
 
 .title-section {
@@ -139,6 +142,176 @@ li {
     font-size: 1rem;
 }
 
+.text-focus-in {
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.swing-in-left-bck {
+    -webkit-animation: swing-in-left-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation: swing-in-left-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation-delay: 0.5s;
+}
+
+
+/**
+ * ----------------------------------------
+ * animation swing-in-left-bck
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes swing-in-left-bck {
+    0% {
+        -webkit-transform: rotateY(-70deg);
+        transform: rotateY(-70deg);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        opacity: 1;
+    }
+}
+
+@keyframes swing-in-left-bck {
+    0% {
+        -webkit-transform: rotateY(-70deg);
+        transform: rotateY(-70deg);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        opacity: 1;
+    }
+}
+
+.swing-in-right-bck {
+    -webkit-animation: swing-in-right-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation: swing-in-right-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation-delay: 0.5s;
+}
+
+
+/**
+ * ----------------------------------------
+ * animation swing-in-right-bck
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes swing-in-right-bck {
+    0% {
+        -webkit-transform: rotateY(70deg);
+        transform: rotateY(70deg);
+        -webkit-transform-origin: right;
+        transform-origin: right;
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+        -webkit-transform-origin: right;
+        transform-origin: right;
+        opacity: 1;
+    }
+}
+
+@keyframes swing-in-right-bck {
+    0% {
+        -webkit-transform: rotateY(70deg);
+        transform: rotateY(70deg);
+        -webkit-transform-origin: right;
+        transform-origin: right;
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+        -webkit-transform-origin: right;
+        transform-origin: right;
+        opacity: 1;
+    }
+}
+
+.slide-in-bottom {
+    -webkit-animation: slide-in-bottom 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-bottom 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+/**
+ * ----------------------------------------
+ * animation slide-in-bottom
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 
 /* MEDIUM VIEW */
 
@@ -152,11 +325,21 @@ li {
     #main-title {
         font-size: 4rem;
         margin-bottom: 5px;
+        background: url('../assets/img/sun/sun_surface.jpg') no-repeat;
+        background-size: cover;
+        background-position: bottom left;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
     }
     #main-subTitle {
         display: inline-block;
         font-size: 1.6rem;
         align-items: baseline;
+        color: black;
+        letter-spacing: 5px;
+        text-shadow: -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red;
     }
     .image {
         border: 2px groove #c0c0c0;
@@ -227,9 +410,11 @@ li {
     #main-subTitle {
         display: inline-block;
         font-size: 2rem;
-        color: #c0c0c0;
         margin-top: 0;
         align-items: baseline;
+        color: black;
+        letter-spacing: 6px;
+        text-shadow: -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red;
     }
     .title-section {
         display: flex;

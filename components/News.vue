@@ -1,5 +1,5 @@
 <template>
-  <div id="news-feed">
+  <div id="news-feed" class="slide-in-bottom">
     <h5 id="feed-section-title">NASA Latest Feed</h5>
     <h6 id="feed-title">{{ data.title }}</h6>
     <h6 id="feed-explanation">{{ data.explanation }}</h6>
@@ -57,6 +57,9 @@ export default {
   font-weight: bolder;
   letter-spacing: 3px;
 }
+
+
+
 
 /* MEDIUM UP VIEW */
 @media screen and (min-width: 991px) {

@@ -6,7 +6,7 @@
         <h4 class="page-subtitle"> - Bringer of Light and Energy</h4>
       </section>
       <section id="info">
-        <img src="../assets/img/sun/sun_surface.jpg" class="image1 img-fluid"  style="float:left;"/>
+        <img src="../assets/img/sun/sun_surface.jpg" class="image1 img-fluid text-focus-in"  style="float:left;"/>
         <h6>
           The Sun is by far the largest object in the solar system. It contains more than 99.8% of the total mass of the Solar System, <nuxt-link to="planets/jupiter">Jupiter</nuxt-link>
           contains most of the rest.<br>
@@ -24,7 +24,7 @@
             </ul>
           </div>
           <br>
-          <img src="../assets/img/sun/sun_explosion.jpg" class="image2 img-fluid"  style="float:right;"/>
+          <img src="../assets/img/sun/sun_explosion.jpg" class="image2 img-fluid text-focus-in"  style="float:right;"/>
           Conditions at the Sun's core (approximately the inner 25% of its radius) are extreme.<br>The temperature is 15.6 million Kelvin and the pressure is 250 billion atmospheres. At the center of the core the Sun's density is more than 150 times that of water.<br>
           The Sun's power (about 386 billion billion mega Watts) is produced by nuclear fusion reactions. Each second about 700,000,000 tons of hydrogen are converted to about 695,000,000 tons of helium and 5,000,000 tons (=3.86e33 ergs) of energy in the form of gamma rays. As it travels out toward the surface, the energy is continuously absorbed and re-emitted at lower and lower temperatures so that by the time it reaches the surface, it is primarily visible light. For the last 20% of the way to the surface the energy is carried more by convection than by radiation.
           The surface of the Sun, called the photosphere, is at a temperature of about 5800 K. Sunspots are "cool" regions, only 3800 K (they look dark only by comparison with the surrounding regions). Sunspots can be very large, as much as 50,000 km in diameter. Sunspots are caused by complicated and not very well understood interactions with the Sun's magnetic field. <br>
@@ -38,7 +38,7 @@
           Further study of the solar wind will be done by Wind, ACE and SOHO spacecraft from the dynamically stable vantage point directly between the Earth and the Sun about 1.6 million km from Earth.
           The solar wind has large effects on the tails of comets and even has measurable effects on the trajectories of spacecraft.
           Spectacular loops and prominences are often visible on the Sun's limb (left).<br>
-          <img src="../assets/img/sun/sun_inside.jpg" class="image3 img-fluid" style="float:left;"/>
+          <img src="../assets/img/sun/sun_inside.jpg" class="image3 img-fluid text-focus-in" style="float:left;"/>
           The Sun's output is not entirely constant. Nor is the amount of sunspot activity. There was a period of very low sunspot activity in the latter half of the 17th century called the Maunder Minimum. It coincides with an abnormally cold period in northern Europe sometimes known as the Little Ice Age. Since the formation of the solar system the Sun's output has increased by about 40%.<br>
           The Sun is about 4.5 billion years old. Since its birth it has used up about half of the hydrogen in its core. It will continue to radiate "peacefully" for another 5 billion years or so (although its luminosity will approximately double in that time). But eventually it will run out of hydrogen fuel. It will then be forced into radical changes which, though commonplace by stellar standards, will result in the total destruction of the Earth (and probably the creation of a planetary nebula).<br><br>
           <span>The Sun's satellites</span><br>
@@ -169,6 +169,8 @@ li {
 .info h6 {
   text-align: left !important;
 }
+
+
 
 /* MEDIUM UP */
 @media screen and (min-width: 991px) {

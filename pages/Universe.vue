@@ -4,9 +4,9 @@
     <h2 class="page-title">The Universe</h2>
     <h4 class="page-subtitle">- everything there is</h4>
   </section>
-  <iframe width="560" height="400" src="https://www.youtube.com/embed/HdPzOWlLrbE?rel=0" frameborder="0" allow="autoplay; encrypted-media" class="embed-responsive" allowfullscreen></iframe>
+  <iframe width="560" height="400" title="Journey through our universe" src="https://www.youtube.com/embed/HdPzOWlLrbE?rel=0" frameborder="0" allow="autoplay; encrypted-media" class="embed-responsive" allowfullscreen></iframe>
   <section id="left_side_images">
-    <div class="images">
+    <div class="images swing-in-left-bck">
       <p class="highlight_text image_label">Center of the Universe</p>
       <img src="../assets/img/universe/universe_center.jpg" alt="Universe" class="img-fluid">
       <p class="highlight_text image_label d-none d-md-block">Universe Expanded</p>
@@ -87,7 +87,7 @@
       Many scientists believe that most dark matter is some unknown subatomic (smaller than an atom) particle that interacts only very weakly with normal matter. If this is true, billions of these particles will have passed through your body by the time you finish reading this. Experiments buried deep underground may one day measure the presence of one such particle passing through, finally solving the mystery of what dark matter really is.
     </h6>
   </div>
-  <section id="right_side_images">
+  <section id="right_side_images" class="swing-in-right-bck">
     <div class="images">
       <p class="highlight_text image_label">The Universe</p>
       <img src="../assets/img/universe/universe1.jpg" alt="Universe" class="img-fluid">
@@ -107,6 +107,15 @@
   </section>
 </div>
 </template>
+
+<script>
+  export default ({
+    name: 'universe',
+    components: {
+
+    }
+  })
+</script>
 
 <style scoped>
 /* DEFAULT MOBILE VIEW */

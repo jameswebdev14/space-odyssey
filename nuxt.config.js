@@ -7,7 +7,10 @@ module.exports = {
      ** Headers of the page
      */
     head: {
-        title: pkg.name,
+        title: 'Space Odyssey',
+        htmlAttrs: {
+            lang: 'en',
+        },
         meta: [{
                 charset: 'utf-8'
             },

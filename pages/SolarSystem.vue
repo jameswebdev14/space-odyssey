@@ -7,7 +7,7 @@
       <h3 class="page-subtitle">- our neighbourhood </h3>
     </section>
 
-    <div class="images">
+    <div class="images text-focus-in">
       <img class="image img-fluid" src="../assets/img/milkyway/Milky_Way_Arms.png"/>
       <img class="image img-fluid" src="../assets/img/solar/solar.jpg" alt="Earth">
       <img class="image img-fluid" src="../assets/img/solar/solarsystem.jpg" alt="Earth">

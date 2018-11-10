@@ -1,5 +1,5 @@
 <template>
-<div id="quiz">
+<div id="quiz-section">
   <h6 id="quiz-section-title">Quiz</h6>
   <p>Try one of our quick 10 question quizzes to test your knowledge</p>
   <p>Select your level</p>
@@ -10,11 +10,11 @@
       <button class="level-btn" id="hardBtn"  @click='setLevel("hard")'>Level 3</button>
     </div>
   </section>
-  <div v-if='currentQuestion != null && showResult === false'>
-    <section class="question-section">
-      <p class="question-index">{{ currentQuestion.key }}. <span class="question-text">{{ currentQuestion.question }}</span></p>
+  <div v-if='currentQuestion != null && showResult === false' class="focus-in-expand">
+    <section class="question-section focus-in-expand">
+      <p class="question-index focus-in-expand">{{ currentQuestion.key }}. <span class="question-text">{{ currentQuestion.question }}</span></p>
     </section>
-    <section class="answer-section">
+    <section class="answer-section focus-in-expand">
       <!-- Display Answers -->
       <div><input type="radio" class="answer-input" name="answer" :value='currentQuestion.answers[0].answer' v-model="selectedAnswer">{{ currentQuestion.answers[0].answer }}</div>
       <div><input type="radio" class="answer-input" name="answer" :value='currentQuestion.answers[1].answer' v-model="selectedAnswer">{{ currentQuestion.answers[1].answer }}</div>
@@ -144,7 +144,7 @@ export default {
 
 <style scoped>
 /* MOBILE DEFAULT VIEW */
-#quiz {
+#quiz-section {
   background-color: rgba(0, 0, 0, 0.5);
   width:100%;
   padding:20px;
@@ -276,9 +276,46 @@ ul {
   text-shadow: 2px 0 red;
 }
 
+.focus-in-expand {
+	-webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/**
+ * ----------------------------------------
+ * animation focus-in-expand
+ * ----------------------------------------
+ */
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
 /* MEDIUM UP VIEW */
 @media screen and (min-width: 991px) {
-  #quiz {
+  #quiz-section {
     width:100%;
     padding: 0 20px 20px 20px;
   }
@@ -294,10 +331,6 @@ ul {
     text-shadow: 0 2px navy;
     font-size: 1.2rem;
     margin-bottom: 15px;
-  }
-
-  #modal {
-
   }
 
   .modal-content {

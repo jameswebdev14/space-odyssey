@@ -1,6 +1,6 @@
 <template>
 <div class="container-fluid main">
-  <section class="top_image_bar">
+  <section class="top_image_bar puff-in-center">
     <div id="image_row">
       <img src="/img/oursolarsystem.jpg" alt="Solar System" class="img-fluid">
       <img src="/img/radio-signals.jpg" alt="Extraterrestial Radio Signals" class="img-fluid">
@@ -17,16 +17,16 @@
       <h3>Welcome to your gateway into the mysterious and exciting world of outer space</h3>
   </section>
   <div id="main_section">
-    <section id="news">
+    <section id="news" class="slide-in-bottom">
       <news v-bind:nasa_data=nasa_data></news>
     </section>
-    <section id="content">
+    <section id="content" class="swing-in-left-bck">
       <h5>Enjoy a space trip through our solar system</h5>
       <div class="embed-responsive embed-responsive-16by9 m-auto">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/m1EBHOmXSqA?rel=0&amp;controls=0&amp;showinfo=0&amp;start=32" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" title="Journey through the solar system" src="https://www.youtube.com/embed/m1EBHOmXSqA?rel=0&amp;controls=0&amp;showinfo=0&amp;start=32" allowfullscreen></iframe>
       </div>
     </section>
-    <section id="quiz">
+    <section id="quiz" class="swing-in-right-bck">
       <quiz></quiz>
     </section>
   </div>
@@ -44,7 +44,6 @@ export default {
     const nasa_data = await app.$axios.$get(
       `https://api.nasa.gov/planetary/apod?api_key=${NASA_API}`
     );
-    console.log("nasa_data: ", nasa_data);
     return { nasa_data };
   },
   components: { quiz, news }
@@ -132,6 +131,51 @@ iframe {
   display: none;
 }
 
+.puff-in-center {
+	-webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation puff-in-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+
 
 
 /*****MEDIUM UP********/
@@ -192,6 +236,7 @@ iframe {
     font-weight: bold;
     font-size: 1.8rem;
     text-shadow: 1px 1px red;
+
   }
 
   #content {
@@ -235,6 +280,7 @@ iframe {
     margin: auto;
     margin-top: 20px;
   }
+
 }
 
 /*  LARGE SCREENS  */
@@ -310,7 +356,10 @@ iframe {
     text-align: center;
     font-weight: bold;
     font-size: 2rem;
-    text-shadow: 2px 2px red;
+    /*text-shadow: 2px 2px red;*/
+    color: black;
+    letter-spacing: 3px;
+    text-shadow: -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red;
   }
 
 
