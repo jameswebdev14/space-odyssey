@@ -1,7 +1,7 @@
 {
     "name": "space-apollo",
     "version": "1.0.0",
-    "description": "Nuxt space discovery app with bootstrap 4",
+    "description": "Nuxt space discovery app",
     "author": "Nigel Wheeldon",
     "private": true,
     "scripts": {
@@ -11,13 +11,10 @@
         "generate": "nuxt generate"
     },
     "dependencies": {
-        "@kevindesousa/vue-image-loader": "^2.0.1",
         "@nuxtjs/axios": "^5.0.0",
         "bootstrap": "^4.1.0",
         "bootstrap-vue": "^1.0.2",
-        "nuxt": "^1.0.0",
-        "v-lazy-image": "^1.2.2",
-        "vue-tiny-lazyload-img": "0.0.3"
+        "nuxt": "^2.2.0"
     },
     "devDependencies": {
         "cross-env": "^5.0.1"

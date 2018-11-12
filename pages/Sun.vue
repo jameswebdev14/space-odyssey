@@ -186,7 +186,7 @@ li {
     grid-template-rows: 80px auto;
     margin-top: 20px;
   }
-
+/*
   .title-section {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
@@ -195,7 +195,7 @@ li {
     align-items:baseline;
     text-align:left;
   }
-
+*/
   .img-fluid {
     max-width: 500px;
     margin:10px;

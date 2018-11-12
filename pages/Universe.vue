@@ -191,7 +191,6 @@ iframe {
     width:800px;
     max-width: 70%;
     height:400px;
-    max-height: 400px;
     grid-column: 1 / -1;
     grid-row: 2 / 3;
     justify-self:center;
@@ -261,13 +260,7 @@ iframe {
     margin-bottom: 0;
   }
 
-  .title-section {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-    margin-bottom: 15px;
-    display: flex;
-    align-items:baseline;
-  }
+
 
 
 }

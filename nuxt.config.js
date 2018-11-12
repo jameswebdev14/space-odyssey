@@ -47,9 +47,7 @@ module.exports = {
     /*
      ** Plugins to load before mounting the App
      */
-    plugins: [
-
-    ],
+    plugins: [],
 
     /*
      ** Nuxt.js modules
@@ -62,12 +60,6 @@ module.exports = {
         /*'@nuxtjs/v-lazy-image'*/
 
     ],
-    /*
-     ** Axios module configuration
-     */
-    axios: {
-        // See https://github.com/nuxt-community/axios-module#options
-    },
 
     /*
      ** Build configuration
@@ -79,5 +71,14 @@ module.exports = {
         extend(config, ctx) {
 
         }
+    },
+    generate: {
+        minify: false
+    },
+    transition: {
+        name: 'page',
+        mode: 'out-in',
+        duration: 500
     }
+
 }

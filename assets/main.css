@@ -103,6 +103,10 @@ body {
 .page-enter-active,
 .page-leave-active {
     transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
 }
 
 .page-enter,
@@ -344,14 +348,6 @@ li {
     .image {
         border: 2px groove #c0c0c0;
     }
-    .image:hover {
-        cursor: pointer;
-        transform: scale(1.5);
-        -webkit-transform: scale(1.5);
-        -moz-transform: scale(1.5);
-        -ms-transform: scale(1.5);
-        -o-transform: scale(1.5);
-    }
     .planet {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -417,19 +413,13 @@ li {
         text-shadow: -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red;
     }
     .title-section {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
         display: flex;
         justify-content: center;
         margin-bottom: 30px;
         align-items: baseline;
         padding: 10px;
-    }
-    .image:hover {
-        cursor: pointer;
-        transform: scale(2);
-        -webkit-transform: scale(2);
-        -moz-transform: scale(2);
-        -ms-transform: scale(2);
-        -o-transform: scale(2);
     }
     .planet {
         display: grid;
@@ -455,6 +445,7 @@ li {
         text-shadow: 0 2px red;
         text-transform: uppercase;
         margin-right: 20px;
+        margin-bottom:30px;
     }
     .page-subtitle {
         font-size: 1.5rem;

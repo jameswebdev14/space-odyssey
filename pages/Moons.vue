@@ -65,7 +65,7 @@
   align-items: center;
 }
 
-#info {
+.info {
   margin-bottom: 30px;
 }
 

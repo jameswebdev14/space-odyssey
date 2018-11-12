@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="info">
-        <h6 class="info-text">
+        <h6>
         Gravity: we barely ever think about it, at least until we slip on ice or stumble on the stairs. To many ancient thinkers, gravity wasn’t even a force—it was just the natural tendency of objects to sink toward the center of Earth, while planets were subject to other, unrelated laws.<br>
         Of course, we now know that gravity does far more than make things fall down. It governs the motion of planets around the Sun, holds galaxies together and determines the structure of the universe itself. We also recognize that gravity is one of the four fundamental forces of nature, along with electromagnetism, the weak force and the strong force.
         The modern theory of gravity—Einstein’s general theory of relativity—is one of the most successful theories we have. At the same time, we still don’t know everything about gravity, including the exact way it fits in with the other fundamental forces.<br><br>
@@ -64,13 +64,6 @@ ul {
   padding: 5px;
 }
 
-#info {
-  font-size: 1rem;
-  padding: 5px;
-  grid-column: 1 / 5;
-  grid-row: 3 / 4;
-}
-
 /* MEDIUM UP VIEW */
 @media screen and (min-width: 991px) {
   #gravity {
@@ -85,9 +78,6 @@ ul {
     padding: 10px;
     grid-column: 1 / 5;
     grid-row: 3 / 4;
-  }
-
-  .info-text {
     text-align:left;
   }
 

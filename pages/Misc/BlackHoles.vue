@@ -8,7 +8,7 @@
         <img class="image img-fluid" src="../../assets/img/blackhole/black-hole-event-horizon.jpg" alt="Earth">
       </div>
       <div class="info">
-        <h6 class="info">
+        <h6>
           Black holes are the strangest objects in the Universe.<br>A black hole does not have a surface, like a planet or star. Instead, it is a region of space where matter has collapsed in on itself.<br>
           Most galaxies, including the Milky Way, have supermassive black holes at their centres. These may be millions or billions of times heavier than our Sun. Supermassive black holes also power active galaxies and ancient galaxies known as quasars. Quasars may be hundreds of times brighter than even the largest ordinary galaxies.
           Objects that fall into black holes are literally stretched to breaking point. An astronaut who ventured too close and was sucked into a black hole would be pulled apart by the overpowering gravity.<br><br>
@@ -90,13 +90,6 @@ li {
     grid-template-columns:1fr;
     grid-template-rows: 80px 350px auto 350px auto;
 
-  }
-
-  #info {
-    font-size: 2rem;
-    padding: 10px;
-    grid-row: 3 / 4;
-    grid-column: 1 / -1;
   }
 
   .bottom-images {

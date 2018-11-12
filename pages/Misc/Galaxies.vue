@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="info">
-      <h6 class="info">
+      <h6>
           Galaxies are sprawling space systems composed of dust, gas, and countless stars.<br>
           The number of galaxies cannot be counted—the observable universe alone may contain 100 billion. Some of these distant systems are similar to our own Milky Way galaxy, while others are quite different.<br>
           Galaxies with less than a billion stars are considered "small galaxies." In our own galaxy, the sun is just one of about 100 billion stars.<br><br>
@@ -77,14 +77,7 @@ li {
     width:100%;
   }
 
-  #info {
-    font-size: 2rem;
-    padding: 10px;
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-  }
-
-  #info h6 {
+  .info h6 {
     text-align: left;
   }
 

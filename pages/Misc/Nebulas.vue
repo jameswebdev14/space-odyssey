@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="info">
-      <h6 class="info">
+      <h6>
           A nebula is a giant cloud of dust and gas in space. Some nebulae (more than one nebula) come from the gas and dust thrown out by the explosion of a dying star, such as a supernova.<br>
           Other nebulae are regions where new stars are beginning to form.<br>
           For this reason, some nebulae are called "star nurseries."<br><br>
@@ -55,11 +55,6 @@ li {
   margin-bottom: 10px;
 }
 
-#info {
-  font-size: 1rem;
-  padding: 5px;
-}
-
 .images-top div {
   display: flex;
   flex-flow: column;
@@ -76,15 +71,7 @@ li {
     align-items: start;
   }
 
-  #info {
-    font-size: 2rem;
-    padding: 10px;
-    grid-column: 1 / -1;
-    grid-row: 3 / 4;
-    width: 100%;
-  }
-
-  #info h6 {
+  .info h6 {
     text-align: left;
   }
 
@@ -92,7 +79,6 @@ li {
     width:100%;
     height: 420px;
     max-width: 450px;
-    max-height: 450px;
   }
 
   p {

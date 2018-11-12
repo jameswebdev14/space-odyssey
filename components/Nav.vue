@@ -21,8 +21,8 @@
 export default {
   methods: {
     close() {
-      console.log('closing menu');
-      document.getElementById("nav_collapse").setAttribute('collapsed', 'true');
+      /*console.log('closing menu');
+      document.getElementById("nav_collapse").setAttribute('collapsed', 'true'); */
     }
   }
 };

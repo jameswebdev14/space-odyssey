@@ -3,8 +3,8 @@
 <div>
   <div id="solar">
     <section class="title-section">
-      <h1 class="page-title">SOLAR SYSTEM </h1>
-      <h3 class="page-subtitle">- our neighbourhood </h3>
+      <h2 class="page-title">SOLAR SYSTEM </h2>
+      <h4 class="page-subtitle">- our neighbourhood </h4>
     </section>
 
     <div class="images text-focus-in">
@@ -144,7 +144,7 @@ iframe {
     align-items: start;
     margin: 0 40px;
   }
-
+/*
   .title-section {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
@@ -152,7 +152,7 @@ iframe {
     display: flex;
     align-items:baseline;
   }
-
+*/
   .images {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
@@ -177,7 +177,6 @@ iframe {
   .image {
     margin-bottom: 30px;
     height: 300px;
-    max-height: 300px;
     width: 30%;
   }
 
